@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Sherman Halvorson",
+      "id": 2
+    },
+    {
+      "name": "Barry McDermott",
+      "id": 4
+    },
+    {
+      "name": "Lena Macejkovic",
+      "id": 9
+    },
+    {
+      "name": "Johnnie Harvey",
+      "id": 10
+    },
+    {
+      "name": "Wallace Boyer",
+      "id": 11
+    }
+  ],
+  "Albums": [
+    {
+      "userId": 1,
+      "title": "Elegant Rubber Cheese",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "title": "Intelligent Bronze Gloves",
+      "id": 18
+    },
+    {
+      "userId": 10,
+      "title": "Fantastic Soft Soap",
+      "id": 19
+    },
+    {
+      "userId": 11,
+      "title": "Elegant Plastic Tuna",
+      "id": 20
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=95416",
+      "id": 1
+    },
+    {
+      "albumId": 18,
+      "url": "https://loremflickr.com/150/150/abstract?lock=87456",
+      "id": 3
+    },
+    {
+      "albumId": 17,
+      "url": "https://loremflickr.com/150/150/abstract?lock=98152",
+      "id": 5
+    },
+    {
+      "albumId": 19,
+      "url": "https://loremflickr.com/150/150/abstract?lock=29159",
+      "id": 6
+    },
+    {
+      "albumId": 20,
+      "url": "https://loremflickr.com/150/150/abstract?lock=27433",
+      "id": 8
+    }
+  ]
+}

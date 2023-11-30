@@ -16,5 +16,6 @@ Currently, two official plugins are available:
 ## Diagramas utilizados
 
 001-Bundle
-![Bundle Image](./src/assets/diagrams/001-Bundle.jpg)
 : Explica que react transforma todo los js en un solo bundle que manda al browser
+
+![Bundle Image](./src/assets/diagrams/001-Bundle.jpg)

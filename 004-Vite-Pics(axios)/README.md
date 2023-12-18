@@ -6,14 +6,3 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Ejercicio de animales
-
-En este ejemplo del react de grider se explica y se aprenden trucos de:
-
-- Uso basico de useState
-- Modificar los arrays con el spread sytax ... para no modficar un state sino crear uno nuevo siempre.
-- Se explica como utilizar el map para mapear componentes
-- se explica como pasar imagenes a un objeto para ser manipuladas
-- se explica el sistema de eventos y el sistema de state.
-- 

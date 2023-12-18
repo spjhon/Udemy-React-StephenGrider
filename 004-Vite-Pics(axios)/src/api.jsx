@@ -15,3 +15,11 @@ const searchImages = async (term) => {
 };
 
 export default searchImages;
+
+/*acerca de este codigo
+
+HTTP request
+
+
+
+*/

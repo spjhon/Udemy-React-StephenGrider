@@ -19,5 +19,6 @@ Currently, two official plugins are available:
 - Se muestra como en lugar de utilizar un boton para leer el input, se utiliza el onChange para que mantenga detectando el cambio y que registrado en un state.
  - Para ello se utiliza un form alrededor del input para que con el enter se ejecute un submit, para eso tambien hay que hacer un prevent e para que no se actualice la pagina.
 - Se explica el event obejct (plain javascript)
-- Se explica como coger datos del input OJO, NO UTILIZAR EL GETDOCUMENTBYID O ALGO ASI, ya que react pierde el rastro, en su lugar utilizar onChange para mantener el state. OJO, NO UTILIZAR EL getelementbyid.value NO NO NO.
+- Se explica como coger datos del input OJO, NO UTILIZAR EL GETDOCUMENTBYID O ALGO ASI, ya que react pierde el rastro, en su lugar utilizar onChange para mantener el state. OJO, NO UTILIZAR EL getelementbyid.value NO NO NO. A estos inputs se les llama controlled inputs.
 - Una forma de saber si se necesita async y await es console.log una ejecucion de una funcion y ver si se imprime la promesa o el resultado de la promesa, si se imprime la promesa es por que fue muy rapido y toca esperar, osea utilizar async y await
+- Se explica como manejar las listas y las key y de donde sacarlas

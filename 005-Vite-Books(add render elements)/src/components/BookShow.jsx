@@ -20,9 +20,10 @@ const BookShow = ({book, onDelete2, onEdit2}) => {
     };
 
     let content = <h3>{book.title}</h3>
+
     if (showEdit){
         content = <BookEdit onSubmit = {handleSubmit} objectBook = {book}/>;
-    };
+    }
 
     return (
     <div className="book-show">

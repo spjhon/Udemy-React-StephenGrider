@@ -1,9 +1,16 @@
 import BookShow from "./BookShow";
+import useBooksContext from "../hooks/use-books-context"; //esto es un custom hook
 
-const BookList = ({arrayBooks, onDelete, onEdit}) => {
-    const renderedBooks = arrayBooks.map((book) => {
-        return <BookShow onEdit2 = {onEdit} onDelete2 = {onDelete} key={book.id} book = {book}/>
+const BookList = () => {
+
+
+    const {books} = useBooksContext();
+
+    const renderedBooks = books.map((book) => {
+        return <BookShow key={book.id} book = {book}/>
     });
+
+
     return (
     <div className="book-list">BookList
         {renderedBooks}

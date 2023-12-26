@@ -4,14 +4,14 @@ import axios from 'axios';
 const BooksContext = createContext();
 
 function Provider({children}){
-
+  
+  /*Desde este state es que se maneja toda la rama desde el input hasta como se reparten cada book*/
   const [books, setBooks] = useState ([]);
-
-
 
   const fetchBooks = useCallback(async () => {
     const response = await axios.get('http://localhost:3001/books');
     setBooks(response.data);
+    return response.data /* Esta es una forma de transmitir el dato resultante a donde se llame la funcion utilizando en este caso useCallback*/
   }, []);
 
   
@@ -22,21 +22,25 @@ function Provider({children}){
   //para agregar un elemento a mitad de array sin cagarla se utiliza .slice()
   //para removerlos se utiliza un metodo propio de javascript llamado filter
   const createBook = async (title) => {
-
     console.log('Need to add book with: ' + title);
-
+    
     const response = await axios.post('http://localhost:3001/books', {
       title
     });
     
     let newTitle = title;
+    
+    /*Esta es una de las tecnicas utilizadas para actualizar un object sin modificar el state debido a la naturaleza de los objects y los arrays*/
     const updatedBooks = [
       ...books,
-      {id: response.data.id, title: newTitle} //tambien se puede dejar solo title y es equivalente a title: title, tambien se puede dejar solo el response.data ya que ahi esta este mismo objeto
+      {id: response.data.id, title: newTitle}
+      /*{id: Math.round(Math.random()*9999), title: title} //tambien se puede dejar solo title y es equivalente a title: title*/
     ];
     setBooks(updatedBooks);
+    console.log(books);
     console.log(updatedBooks);
     console.log('Libro agregado con el id: ' + response.data.id);
+
   };
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -68,7 +72,7 @@ function Provider({children}){
     setBooks(updatedBooks);
   };
 
-
+///////////////////////////////////////////////////////////////////////////////
 
   const valueToShare = {
     books: books,

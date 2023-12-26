@@ -28,6 +28,7 @@ function App() {
     });
     
     let newTitle = title;
+    
     const updatedBooks = [
       ...books,
       {id: response.data.id, title: newTitle} //tambien se puede dejar solo title y es equivalente a title: title, tambien se puede dejar solo el response.data ya que ahi esta este mismo objeto

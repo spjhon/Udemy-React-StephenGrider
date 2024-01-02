@@ -1,5 +1,7 @@
 import className from 'classnames';
 
+//Estos props que entran a parte de children tienen la particularidad de que son booleanos sin necesidad de expresarlo en true o false ya
+//que el falce vendria en tipo undefined si no se reporta el prop.
 function Button({children,
 primary,
 secondary,

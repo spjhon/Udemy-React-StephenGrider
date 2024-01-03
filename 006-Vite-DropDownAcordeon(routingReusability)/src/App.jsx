@@ -4,21 +4,13 @@ function App() {
 
   return (
     <>
-      <Button primary>
+      <Button 
+      primary="true"
+      outline="true"
+      >
         ese es un div
       </Button>
-      <Button secondary>
-        Boton 2
-      </Button >
-      <Button success>
-        ese es un div
-      </Button>
-      <Button warning>
-        ese es un div
-      </Button>
-      <Button danger outline>
-        ese es un div
-      </Button>
+      
     </>
   )
 }

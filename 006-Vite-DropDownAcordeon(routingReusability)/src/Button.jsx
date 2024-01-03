@@ -1,10 +1,8 @@
 
-import "./Button.css";
-
 
 //Estos props que entran a parte de children tienen la particularidad de que son booleanos sin necesidad de expresarlo en true o false ya
 //que el falce vendria en tipo undefined si no se reporta el prop.
-function Button({children,
+/*function Button({children,
 primary,
 secondary,
 success,
@@ -42,7 +40,7 @@ rounded,
         'text-yellow-400': outline && warning,
         'text-red-500': outline && danger,
         
-    });    */
+    });    
 
     let classes = "buttonBase"
 
@@ -98,5 +96,60 @@ rounded,
 }
 
 
+
+export default Button;*/
+
+
+import "./Button.css";
+import PropTypes from "react";
+
+Button.propTypes = {
+
+    children: PropTypes.any.isRequired,
+    
+    checkVariationValue: ({primary, secondary, success, warning, danger}) => {
+
+        const count = Number(!!primary) + Number(!!secondary) + Number(!!warning) + Number(!!success) + Number(!!danger);
+
+        if (count > 1) {
+            return new Error ('Only one of the list can be true');
+        }
+    },
+
+};
+
+const variationClassMap = {
+  primary: "primary",
+  secondary: "secondary",
+  success: "success",
+  warning: "warning",
+  danger: "danger",
+  rounded: "rounded",
+  outline: "outline",
+};
+
+function Button({ children, ...rest }) {
+
+    console.log(rest)
+   //Entonces el object.key recupera las llaves de un object y luego con reduce se iteractua con el array que queda de keys
+   //y compara en cada iteracion haber si es igual al lo que entra en rest o no y si si se agrega a la lista
+   //tener en cuenta que se puede utilizar el push por que no es un state.
+  const variationClasses = Object.keys(variationClassMap).reduce((classes, prop) => {
+    
+    if (rest[prop]) {
+      classes.push(variationClassMap[prop]);
+      if (rest.outline) {
+        classes.push(`outlineAnd${prop}`);
+      }
+    }
+    return classes;
+  }, ["buttonBase"]);
+
+  
+
+  const buttonClasses = rest.className ? rest.className + " " + variationClasses.join(" ") : variationClasses.join(" ");
+
+  return <button {...rest} className={buttonClasses}>{children}</button>;
+}
 
 export default Button;

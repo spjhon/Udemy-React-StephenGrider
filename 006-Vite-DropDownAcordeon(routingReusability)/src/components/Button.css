@@ -6,6 +6,7 @@
   padding-right: 0.75rem;
   align-items: center;
   border-width: 1px;
+
 }
 
 .primary {
@@ -69,4 +70,8 @@ background-color: #111827;
 
 .outlineAnddanger{
     color: #EF4444; 
+}
+
+button > svg {
+    margin-right: 5px;
 }

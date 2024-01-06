@@ -1,0 +1,24 @@
+.Accordion_arrow {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.Accordion__content {
+  padding: 1.25rem;
+  border-bottom-width: 1px;
+}
+
+.Accordion__body {
+  display: flex;
+  padding: 0.75rem;
+  align-items: center;
+  border-bottom: 1px solid #303030;
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+.Accordion__external {
+  border: 1px solid #303030;
+  border-radius: 0.25rem;
+  
+}

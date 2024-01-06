@@ -1,0 +1,16 @@
+.Panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fcExpand {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.openPanel {
+  position: absolute;
+  top: 100%;
+}

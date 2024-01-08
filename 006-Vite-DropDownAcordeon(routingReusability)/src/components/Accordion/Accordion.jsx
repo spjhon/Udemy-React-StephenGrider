@@ -4,7 +4,7 @@ import "./Accordion.css"
 
 function Accordion ({items}) {
 
-    const [expandedIndex, setExpandedIndex] = useState(1);
+    const [expandedIndex, setExpandedIndex] = useState(-1);
 
 
 

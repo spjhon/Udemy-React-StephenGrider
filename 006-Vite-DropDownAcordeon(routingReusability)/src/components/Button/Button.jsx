@@ -134,7 +134,7 @@ const variationClassMap = {
 
 function Button({ children, ...rest }) {
 
-    
+    console.log(rest)
    //Entonces el object.key recupera las llaves de un object y luego con reduce se iteractua con el array que queda de keys
    //y compara en cada iteracion haber si es igual al lo que entra en rest o no y si si se agrega a la lista
    //tener en cuenta que se puede utilizar el push por que no es un state.

@@ -11,6 +11,7 @@ function TablePage() {
 
     ];
 
+    //este archivo config lo que hace es que cada object es una columna y de ahi se le asignan configuraciones
     const config = [
         {
         label: 'Name Fruit',

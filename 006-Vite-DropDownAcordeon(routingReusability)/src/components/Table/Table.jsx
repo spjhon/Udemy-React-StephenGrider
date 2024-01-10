@@ -6,6 +6,8 @@ function Table ({dataProp, configProp}) {
     <th className="p-3">{configProp[1].render(fruit)}</th>
     <th className="p-3">{configProp[2].render(fruit)}</th> */
 
+    //Este codigo y el configProp que pasa es para darle una amplia reusabilidad a la tabla
+
     const renderedHeaders = configProp.map((column) => {
         if (column.header){
             return <Fragment key={column.label}>{column.header()}</Fragment>

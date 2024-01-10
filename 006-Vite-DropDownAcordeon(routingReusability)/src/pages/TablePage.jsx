@@ -12,10 +12,12 @@ function TablePage() {
     ];
 
     //este archivo config lo que hace es que cada object es una columna y de ahi se le asignan configuraciones
+    //entonces cada columna tiene su propia forma de manejar lo que vaya llegando e ir renderizando celda a celda
     const config = [
         {
         label: 'Name Fruit',
-        render: (fruit) => fruit.name,
+        //en esta funcion arrow la utilize de manera que muestr que cuando se utiliza el {}, se debe de utilizar el return
+        render: (fruit) => {return fruit.name},
         sortValue: (fruit) => fruit.name
         },
 

@@ -24,6 +24,8 @@ function Table ({dataProp, configProp, keyFn}) {
     //aqui se esta lleno celda por celda para crear un renderizado perzonalizado de acuerdo al config
     //EL ORDEN DE RENDERIZADO: es que despues de tener los headers se va por cada object (fruta) y se renderiza toda la fila ya que
     //cada fruit tiene sus propiedades y se renderiza toda una fila que representa una fruit antes de pasar a la siguiente fila
+    
+    //piensalo de esta forma, cada td es una celda entonces dole map hace tratamiento a cada minimo detalle que mapee
     const renderedRows = dataProp.map((fruit) => {
         const renderedCells = configProp.map((column) => {
             return <td className="p-2" key={column.label}>{column.render(fruit)}</td>

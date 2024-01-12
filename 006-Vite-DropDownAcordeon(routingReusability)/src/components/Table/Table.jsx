@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function Table ({dataProp, configProp}) {
+function Table ({dataProp, configProp, keyFn}) {
 
     /* <th className="p-3">{configProp[0].render(fruit)}</th>
     <th className="p-3">{configProp[1].render(fruit)}</th>
@@ -29,7 +29,7 @@ function Table ({dataProp, configProp}) {
             return <td className="p-2" key={column.label}>{column.render(fruit)}</td>
         });
         return (
-            <tr className="border-b" key = {fruit.name}>
+            <tr className="border-b" key = {keyFn(fruit)}>
             {renderedCells}
             </tr>
         )

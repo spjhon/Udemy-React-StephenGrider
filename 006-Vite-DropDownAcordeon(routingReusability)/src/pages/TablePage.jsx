@@ -23,19 +23,33 @@ function TablePage() {
 
         {
         label: 'Color',
-        render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`} ></div>
+        render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`} ></div>,
+        
         },
 
         {
         label: 'Score',
         render: (fruit) => fruit.score,
-        header: () => <th className="bg-red-500">Score</th>,
+        //el header es un opconal por si se desea agregar algo mas al titulo de la columna de la tabla
+        /*header: () => <th className="bg-red-500">Score</th>,*/
         sortValue: (fruit) => fruit.score
         }
-    ]
+    ];
+
+    //esta funcion es para extraer facilmente la llave de los datos entrantes y pasarlos a los maps en donde
+    //se utilicen
+    //ojo, este key va solo al retorno final de cada fruit en este caso, no a las celdas individuales
+    //la ventaja de esta funcion es que se le puede cambiar el tipo de elemento que desa ordenar con tan 
+    //solo cambiar el object
+    const keyFn = (fruit) => {
+        return fruit.name;
+    };
+
+    
+ 
     return (
         <div>
-            <SortableTable dataProp = {data} configProp = {config}></SortableTable>
+            <SortableTable dataProp={data} configProp={config} keyFn={keyFn}></SortableTable>
         </div>
     );
 }

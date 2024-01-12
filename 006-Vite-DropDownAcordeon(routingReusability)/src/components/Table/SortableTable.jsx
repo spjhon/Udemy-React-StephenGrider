@@ -49,15 +49,28 @@ function SortableTable(props) {
 
     if (sortOrder && sortBy) {
         const {sortValue} = configProp.find(column => column.label === sortBy);
+
+        //Esta funcion es un sort con un algoritmo muy util, un COMPARADOR
+        //sort convierte a string y luego compara lo que da lugar a bugs asi ue se utiliza el comparador
+        //para hacer las verificaciones, video 259 de grider
+        //el comparador lo que hace es restar los elementos y asi si es negativo o no saber cual es mayor que cual
         sortedData = [...dataProp].sort((a,b) => {
+            //aqui lo que se esta haciendo es utilizar un pattern para extraer los valores por los cuales
+            //se va a re-ordenar la lista de objects que se le meta, la funcion sortValue
+            //busca y extrae los valores de object y los somete al sort, video 262
             const valueA = sortValue(a);
             const valueB = sortValue(b);
 
+            //el revez order funciona de forma simple, debido a que el truco del sort es si el resultado 
+            //de la resta es -1 o no, entonces para darle un orden inverso se le mete el -1
             const reverseOrder = sortOrder === 'ascendente' ? 1 : -1;
 
+            //este if es para saber si el valor a ordenar que entra es un string o un numero
             if (typeof valueA === 'string'){
+            //el localeCompare es para comparar strings transformandolos en numeros
                 return valueA.localeCompare(valueB) * reverseOrder;
             }else{
+                //este se aplica si el valor es numero
                 return (valueA-valueB) * reverseOrder;
             }
         });

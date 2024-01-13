@@ -9,11 +9,14 @@ function Table ({dataProp, configProp, keyFn}) {
     //Este codigo y el configProp que pasa es para darle una amplia reusabilidad a la tabla
 
     //este me lo pille, renderiza si hay o no un header existente, si si manda un fragment con lo que toca renderizar
-    // sino retorna el label
+    // sino retorna la funcion header que esta por alla atras
     const renderedHeaders = configProp.map((column) => {
         if (column.header){
+            //PARA TENER EN CUENTA, como se esta trabajando con tablas, no se puede retornar un div
+            //entonces dse utiliza el fragment que pertenece a react
+            //esta pregunta sobre header es para renderizar cualquier header que se agrege
             return <Fragment key={column.label}>{column.header()}</Fragment>
-        };
+        }
 
         return <th key={column.label}>{column.label}</th>
     });

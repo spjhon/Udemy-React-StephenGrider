@@ -4,10 +4,15 @@ import { GoChevronUp, GoChevronDown, GoRocket } from "react-icons/go";
 
 
 function SortableTable(props) {
+    //Aqui tenemos una combinacion de dos estados, el sortOrder es obviamente el array ordenado de acuerdo a lo que diga sortBy
+    //que tambien es dinamico por eso se necesitan dos states
     const [sortOrder, setSortOrder] = useState(null);
+    //los posibles estados de sortOrder son: null, "acendente" o "descendente"
     const [sortBy, setSortBy] = useState(null);
+    //los posibles estados de sortBy son: null, "name", "score"
     const {configProp, dataProp} = props;
 
+    
     const handleClick = (label) => {
 
         if (sortBy && label !== sortBy){
@@ -16,6 +21,7 @@ function SortableTable(props) {
             return;
         }
 
+        //AQUI SE DEFINE EL CLICLO, si esta en un estado pues que pase al otro y asi dando la vuelta
         if (sortOrder === null){
             setSortOrder('ascendente');
             setSortBy(label);
@@ -25,10 +31,14 @@ function SortableTable(props) {
         }else if (sortOrder === 'descendiente'){
             setSortOrder(null);
             setSortBy(null);
-        };
+        }
             
     }
 
+
+    //El updatedConfig es para agregar el header, si existe un sortValue, si si, entonces renderizar los triangulos
+    //ahora los triangulos que renderiza depende de el state
+    
     const updatedConfig = configProp.map ((column) =>{
         if (!column.sortValue){
             return column;
@@ -45,10 +55,17 @@ function SortableTable(props) {
         }
     });
 
-    let sortedData = dataProp;
+    let sortedData = [...dataProp];
 
+    //originalmente los states son null para que la tabla renderiza en un puff con null
+    //pero si existe un sortorder y un srtby pues que haga este nuevo sortedData que sobreescriba el prop
     if (sortOrder && sortBy) {
+        //Como se esta reciviendo todo el object props completo, pues en esta variable se extrae el sortValue de configProp
         const {sortValue} = configProp.find(column => column.label === sortBy);
+        console.log(sortValue)
+        console.log(configProp.find(column => column.label === sortBy));
+        //its equivalent to:
+        //const sortValue = configProp.find(column => column.label === sortBy).sortValue;
 
         //Esta funcion es un sort con un algoritmo muy util, un COMPARADOR
         //sort convierte a string y luego compara lo que da lugar a bugs asi ue se utiliza el comparador
@@ -76,6 +93,7 @@ function SortableTable(props) {
         });
     }
 
+    //en cuanto al {...props}, si se manda un dataProp y un configProp que es igual a los props, lo que pasa es que se SOBREESCRIBE
     return (
         <div> 
             {sortOrder} - {sortBy}

@@ -55,6 +55,7 @@ function SortableTable(props) {
         }
     });
 
+    //esta es una copia del prop ya que .sort modifica el array.
     let sortedData = [...dataProp];
 
     //originalmente los states son null para que la tabla renderiza en un puff con null

@@ -3,6 +3,7 @@ import { useState } from "react";
 function CounterPageOld ({initialCount}) {
     const [count, setCount] = useState(initialCount);
 
+    //redordar que este state es un patter de control de input, a controlled input
     const [valueToAdd, setValueToAdd] = useState(0)
 
     const increment = () => {
@@ -14,6 +15,7 @@ function CounterPageOld ({initialCount}) {
     };
 
     const handleChange = (event) => {
+        //el parce integer es debido a que el evento llega en forma de string
         const value = parseInt(event.target.value) || 0;
         setValueToAdd(value);
         console.log(value);

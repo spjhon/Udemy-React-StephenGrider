@@ -5,6 +5,8 @@ const SET_VALUE_TO_ADD = 'change-value-to-add';
 const DECREMENT_COUNT = 'decrement';
 const ADD_VALUE_TO_COUNT = 'add_value_to_count';
 
+
+//SE CREA EL REDUCER
 const reducer = (state, action) => {
     // EN LUGAR DEL IF SE VA A UTILIZAR EL SWITCH
     switch (action.type) {
@@ -53,6 +55,10 @@ const reducer = (state, action) => {
 function CounterPage ({initialCount}) {
     // const [count, setCount] = useState(initialCount);
     // const [valueToAdd, setValueToAdd] = useState(0)
+
+    //SEGUN ESTO, el state el el array que llega de nuevos states a renderizar de acuerdo a la cantidad de states que se creen en el
+    //reducer (en este caso son 2 states)
+    //el punto importante es el dispatch, como se mandan los nuevos states a la store para que se distribuyan
     const [state, dispatch] = useReducer (reducer, {
         count: initialCount,
         valueToAdd: 0,

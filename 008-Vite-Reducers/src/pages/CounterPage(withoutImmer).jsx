@@ -27,6 +27,7 @@ const reducer = (state, action) => {
             }
         case ADD_VALUE_TO_COUNT:
             return {
+                //la app puede funcionar sin este ...state pero es mejor por si vienen otras propiedades
                 ...state,
                 count: state.count + state.valueToAdd,
                 valueToAdd: 0,
@@ -59,6 +60,10 @@ function CounterPage ({initialCount}) {
     //SEGUN ESTO, el state el el array que llega de nuevos states a renderizar de acuerdo a la cantidad de states que se creen en el
     //reducer (en este caso son 2 states)
     //el punto importante es el dispatch, como se mandan los nuevos states a la store para que se distribuyan
+    
+    //Como funciona el dispatch:
+    // - Se llama al dipatch con useReducer lo primero es dar una referencia a la funcion de arriba ("reducer")
+
     const [state, dispatch] = useReducer (reducer, {
         count: initialCount,
         valueToAdd: 0,
@@ -84,7 +89,9 @@ function CounterPage ({initialCount}) {
         const value = parseInt(event.target.value) || 0;
         // setValueToAdd(value);
         dispatch({
+            // esta es la accion que se utiliza en el reducer para actualizar el state
             type: SET_VALUE_TO_ADD,
+            //el payload es si se necesita mandar un dato al state
             payload: value,
         });
     };

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { reset } from "../actions";
 
+//cada slice se puede considerar como un state con reducers que se relacionan entre si
 const songsSlice = createSlice ({
     name: "song",
     initialState: [],

@@ -4,7 +4,7 @@ import { configureStore } from "@reduxjs/toolkit"
 
 
 
-
+//este es el store donde se guarda todo el state
 const store = configureStore ({
     reducer: {
         songs: songsReducer,  //songsSlice.reducer,

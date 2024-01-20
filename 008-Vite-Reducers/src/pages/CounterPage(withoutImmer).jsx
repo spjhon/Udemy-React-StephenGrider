@@ -7,11 +7,15 @@ const ADD_VALUE_TO_COUNT = 'add_value_to_count';
 
 
 //SE CREA EL REDUCER
+//Como funciona el reducer: el state es el state viejo, por eso para no modificar el state se utiliza el retorno de un nuevo object. El ...state y el action
+//que es lo que viene desde el dispatch y actualiza en este caso lo que venga en payload, por eso en redux va un payload y un type
+//ojo el ...state es por si existe otro state en el reducer que no se actualiza en el case entonces es mejor siempre meter el ...state
 const reducer = (state, action) => {
     // EN LUGAR DEL IF SE VA A UTILIZAR EL SWITCH
     switch (action.type) {
         case INCREMENT_COUNT:
             return {
+                
                 ...state,
                 count: state.count + 1
             };
@@ -86,6 +90,7 @@ function CounterPage ({initialCount}) {
     };
 
     const handleChange = (event) => {
+        // este || se utiliza debido a que si se apreta la tecla delete va a enviar algo que no es un numero y se va a tostar el input
         const value = parseInt(event.target.value) || 0;
         // setValueToAdd(value);
         dispatch({

@@ -11,6 +11,7 @@ const songsSlice = createSlice ({
     initialState: [],
     reducers: {
         addSong(state, action) {
+            
             state.push(action.payload);
         },
         removeSong(state, action) {

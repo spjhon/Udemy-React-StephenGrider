@@ -12,7 +12,7 @@ const store = configureStore ({
     }
 });
 
-// console.log(store.getState());
+//console.log(store.getState());
 
 export {store};
 export {addSong, removeSong, addMovie, removeMovie};

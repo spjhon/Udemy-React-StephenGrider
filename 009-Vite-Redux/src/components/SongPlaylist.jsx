@@ -7,7 +7,7 @@ function SongPlaylist() {
   // Get list of songs
   const dispatch = useDispatch();
   const songPlaylist = useSelector((state) => {
-    console.log(state);
+    
     return state.songs;
   });   // [];
 

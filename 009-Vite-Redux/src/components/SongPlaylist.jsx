@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { createRandomSong } from "../data/index";
-import { addSong, removeSong /*, store*/ } from "../store";
+import { addSong, removeSong, /*store*/ } from "../store";
 
 function SongPlaylist() {
   // To Do:
   // Get list of songs
   const dispatch = useDispatch();
+  //y el useSelector es para traer el state
   const songPlaylist = useSelector((state) => {
     
     return state.songs;
@@ -13,9 +14,13 @@ function SongPlaylist() {
 
   const handleSongAdd = (song) => {
    
+    //cual es la cosa con el action, dentro de cada slice hay propiedades que se pueden aplicar, una de ellas
+    //es el actions (songsSlice.actions) que lo que hace es que nos facilita la creaction de actions que es
+    //el type y el payload que se envia al slice y de ahi al reducer.
+    //OJO, no son las mismas funciones que se encuentran en el slice, esta es exclusiva para mandar actions
     const action = addSong(song);
     
-    //console.log(store)
+    //console.log(store.getState())
     //store.dispatch({payload: "prueba", type: "song/addSong"})
     dispatch(action);
   };

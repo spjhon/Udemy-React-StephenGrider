@@ -7,6 +7,8 @@ import { configureStore } from "@reduxjs/toolkit"
 //este es el store donde se guarda todo el state
 const store = configureStore ({
     reducer: {
+        //la cosa es asi, este store guarda los states, cada key es un state y los slices tiene reducers
+        //que dictan como modificar los states e ir llenando los states
         songs: songsReducer,  //songsSlice.reducer,
         movies: moviesReducer  // moviesSlice.reducer
     }

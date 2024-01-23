@@ -6,11 +6,10 @@ function SongPlaylist() {
   // To Do:
   // Get list of songs
   const dispatch = useDispatch();
-  //y el useSelector es para traer el state
+  //y el useSelector es para traer el state, intente no utilizarlo para otra cosa
   const songPlaylist = useSelector((state) => {
-    console.log(state.songs)
     return state.songs;
-  }, []);   // [];
+  });   // [];
 
   const handleSongAdd = (song) => {
    
@@ -19,7 +18,6 @@ function SongPlaylist() {
     //el type y el payload que se envia al slice y de ahi al reducer.
     //OJO, no son las mismas funciones que se encuentran en el slice, esta es exclusiva para mandar actions
     const action = addSong(song);
-    
     //console.log(store.getState())
     //store.dispatch({payload: "prueba", type: "song/addSong"})
     dispatch(action);

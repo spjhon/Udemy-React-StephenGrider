@@ -30,9 +30,19 @@ const songsSlice = createSlice ({
             return [];     este codigo hubiera funcionado pero no debido a que 
         }*/
     },
+    //este extra reducer es para que el reset se aplique a todos los reducers de la store principal
+    //buscar por adicional action types ademas de los de arriba
+    //la idea de este extra reducer es para escuchar dispatch que no esta asociado al reducer como tal
     extraReducers(builder) {
+        //entonces el addCase es propio de javascript y se le agrega el reset es el action type de "movie/reset" y el segundo argumento es
+        //una funcion arrow que es la misma funcion de arriba en donde le entra el action y el state y luego se retorna el empty
+        //el builder seria el state
+        //de chatGPT: This function is used to define additional reducer logic that responds to other action types outside of the slice's own actions.
+        //el addCase no pertenece a javascript, es de redux solamente
         builder.addCase(reset, (state, action) => {
             //debido a immer, no se puede hacer algo como state = [] ya que esto es asignar de nuevo mas no cambiar el state asi que se utiliza el return
+            //state.playlist = [] va a funcionar normal pero state = [] no.
+            //state.push("este es un extra reducer")
             return [];
         });
     },
@@ -41,3 +51,5 @@ const songsSlice = createSlice ({
 //aqui se esta exportando los actions creators
 export const {addSong, removeSong} = songsSlice.actions; //songsSlice.actions.addSong() este es un action
 export const songsReducer = songsSlice.reducer;
+
+//console.log(reset.type)

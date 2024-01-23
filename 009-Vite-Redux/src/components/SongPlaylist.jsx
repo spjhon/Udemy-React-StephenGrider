@@ -8,9 +8,9 @@ function SongPlaylist() {
   const dispatch = useDispatch();
   //y el useSelector es para traer el state
   const songPlaylist = useSelector((state) => {
-    
+    console.log(state.songs)
     return state.songs;
-  });   // [];
+  }, []);   // [];
 
   const handleSongAdd = (song) => {
    

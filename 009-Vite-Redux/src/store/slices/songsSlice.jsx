@@ -16,7 +16,7 @@ const songsSlice = createSlice ({
             //console.log(songsSlice.actions), estos son los actions disponibles para dispatch en el componente
             //algo mas para tener en cuenta, este state no es el state completo ese esta en el store
             //console.log(state)
-            console.log(JSON.parse(JSON.stringify(state)));
+            //console.log(JSON.parse(JSON.stringify(state)));
             //este cosolelog con json me lo dio chatgpt para poder ver el estado del state
             //el hecho que este console.log del state no funcione como se espera es por la biblioteca de immer
             state.push(action.payload);

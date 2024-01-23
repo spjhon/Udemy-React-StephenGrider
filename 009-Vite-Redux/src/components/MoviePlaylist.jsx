@@ -16,6 +16,8 @@ function MoviePlaylist() {
     const action = addMovie(movie);
     dispatch(action);
   };
+
+  
   const handleMovieRemove = (movie) => {
     // To Do:
     // Remove movie from list of movies

@@ -25,6 +25,11 @@ const carsSlice = createSlice({
             const updated = state.carsData.filter((car) => {
                 return car.id !== action.payload
             });
+            console.log(JSON.stringify(state, null, 2)) // asi se puede ver el state solo para debuggin porpuses
+            //la forma de removerlo es utilizar el filter para dejar volver a hacer la lista de nuevo y
+            // publicarla completa en el state sin el elemento que falta
+            //algo para tener en cuenta es que react utiliza reonciliation asi que si el array tiene 20000
+            //elementos o mas pues react no va a re-renderizar todo eso en el DOM
             state.carsData = updated;
         },
     },

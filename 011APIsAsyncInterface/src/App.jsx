@@ -1,6 +1,6 @@
 import reactLogo from './assets/react.svg'
 import UsersList from './components/UsersList'
-import '../dist/output.css'
+import './output.css'
 
 function App() {
 

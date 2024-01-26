@@ -25,7 +25,7 @@ function PhotosList({album}) {
     return <div>
         <div className="m-2 flex flex-row items-center justify-between">
             <h3 className="text-lg font-bold">Photos In {album.title}</h3>
-            <Button loading={addPhotoResults.isLoading} onClick={handleAddPhoto}>
+            <Button primary="true" loading={addPhotoResults.isLoading} onClick={handleAddPhoto}>
                 + Add Photo
             </Button>
         </div>

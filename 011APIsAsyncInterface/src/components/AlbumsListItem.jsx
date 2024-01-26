@@ -13,7 +13,7 @@ function AlbumsListItem({album}) {
 
     const header = (
     <>
-        <Button className="mr-2" loading={results.isLoading} onClick={handleRemoveAlbum}>
+        <Button primary="true" className="mr-2" loading={results.isLoading} onClick={handleRemoveAlbum}>
             <GoTrashcan></GoTrashcan>
         </Button>
         {album.title}

@@ -66,7 +66,7 @@ function UsersList () {
 
                 isCreatingUser? 'Creating User...' :
 
-                <Button onClick={handleUserAdd}>
+                <Button primary="true" onClick={handleUserAdd}>
                     + Add User
                 </Button>
             }

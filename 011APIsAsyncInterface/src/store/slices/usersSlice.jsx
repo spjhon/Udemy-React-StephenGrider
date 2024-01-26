@@ -7,14 +7,16 @@ const usersSlice = createSlice({
     name: 'users',
     initialState: {
         data: [],
+        //este slice es particular ya que al hacer fetching se deben de tener en cuenta los states de isLoading y error
+        //para el proceso de fetching
         isLoading: false,
         error: null,
     },
-    reducers: {},
+    reducers: {}, //Curiosamente esta app no utiliza reducers ya que las funciones de despacho no procesan, solo hacen fetch
     extraReducers(builder) {
         builder.addCase(fetchUsers.pending, (state, action) => {
             //Updtae our state object however appropriate
-            // to show th euser what we are loading data
+            // to show the user what we are loading data
             state.isLoading = true;
         });
         builder.addCase(fetchUsers.fulfilled, (state, action) => {

@@ -133,6 +133,7 @@ const variationClassMap = {
 
 
 function Button({ children, ...rest }) {
+    //este componente tienen un error, si se deja vacio los props se tuesta el compoenente
 
     console.log(rest)
    //Entonces el object.key recupera las llaves de un object y luego con reduce se iteractua con el array que queda de keys

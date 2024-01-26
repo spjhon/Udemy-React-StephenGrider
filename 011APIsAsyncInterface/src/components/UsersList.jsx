@@ -8,6 +8,7 @@ import UsersListItem from "./UsersListItem";
 
 
 function UsersList () {
+    //ESTE PRIMER COMPONENTE HACE FETCH A LOS USUARIOS QUE EXISTEN
 
     const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers);
 
@@ -43,7 +44,7 @@ function UsersList () {
         <div className="flex flex-row justify-between items-center m-3">
             <h1 className="m-2 text-xl">Users</h1>
 
-                <Button onClick={handleUserAdd} loading={isCreatingUser}>
+                <Button primary="true" onClick={handleUserAdd} loading={isCreatingUser}>
                     + Add User
                 </Button>
 

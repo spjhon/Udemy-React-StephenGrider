@@ -3,7 +3,8 @@ import { removeCar } from "../store";
 
 function CarList () {
     const dispatch = useDispatch();
-
+    //en este useSelector se esta utilizando algo de desctructuring
+    //recuerda que el useSelector retorna valor, es una funcion despues de todo
     const {cars, name} = useSelector(({form, cars: {searchTerm, carsData}}) => {
         
         const filteredCars =  carsData.filter((car) =>
@@ -22,7 +23,7 @@ function CarList () {
     });
 
     const renderedCars = cars.map((car) => {
-
+        //este bold es por si se va a ingresar un nombre parecido pues se resalte
         const bold = name && car.name.toLowerCase().includes(name.toLowerCase())
 
         return (

@@ -15,6 +15,9 @@ const formSlice = createSlice({
             state.cost = action.payload;
         },
     },
+
+    //este extra reducer es curioso, mas curioso que el del ejercicio anterior ya que aqui utiliza es 
+    //el addCar function del otro slice para crear el reseteo, escucha otro ACTION TYPE.
     extraReducers(builder) {
         builder.addCase(addCar, (state, action) => {
             state.name = '';

@@ -15,12 +15,13 @@ function UsersList () {
     const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser)
 
     
-    //se aplica deconstruccion para separar lo que viene del otro lado
+    //se aplica deconstruccion para separar lo que viene del otro lado de una vez en una variable llamada data
     const {data}= useSelector((state) => {
         return state.users
     });
 
     useEffect(() => {
+        //aqui funciona el dispatch(fechusers())
         doFetchUsers();
     }, [doFetchUsers]);
 

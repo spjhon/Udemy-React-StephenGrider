@@ -21,6 +21,9 @@ function Skeleton ({times, className}) {
         'to-gray-200'
     );
 
+    //esta constante boxes se refiere a la creacion de un array con la cantidad de elementos times y luego llenarlos con 0 y luego
+    //coger esa lista y darle animaciones y estilos, el turco es simple, es coger un div negro del todo y otro con gradiente y coger
+    //el del gradiente y moverse por fuera del que esta con el fondo estatico y negro del todo
     const boxes = Array(times).fill(0).map ((_, i) => {
         return <div key={i} className={outerClassNames} >
             <div className={innerClassNames}></div>

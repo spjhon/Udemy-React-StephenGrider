@@ -20,8 +20,13 @@ export const store = configureStore({
 
 setupListeners(store.dispatch);
 
+
+//Este export es todo lo de los thunks para que se trasmita la info desde el store de redux para mejor orden de datos
+
 export * from './thunks/fetchUsers';
 export * from './thunks/addUser';
 export * from './thunks/removeUser'
+
+//estos otros exports pertenencen a la otra forma de hacer fetching
 export {useFetchAlbumsQuery, useAddAlbumMutation, useRemoveAlbumMutation} from './apis/albumsApi';
 export {useFetchPhotoQuery, useAddPhotoMutation, useRemovePhotoMutation} from './apis/photosApi';

@@ -14,10 +14,13 @@ const usersSlice = createSlice({
     },
     reducers: {}, //Curiosamente esta app no utiliza reducers ya que las funciones de despacho no procesan, solo hacen fetch
     extraReducers(builder) {
+        //estos extra reducers son necesarios ya que el action case que es esta escuchando no tiene que ver con el slice como tal
+        //el slice es mas para modificar los states mientras que estos son solo para hacer el fetching.
         builder.addCase(fetchUsers.pending, (state, action) => {
             //Updtae our state object however appropriate
             // to show the user what we are loading data
             state.isLoading = true;
+            console.log(action)
         });
         builder.addCase(fetchUsers.fulfilled, (state, action) => {
             state.isLoading = false;

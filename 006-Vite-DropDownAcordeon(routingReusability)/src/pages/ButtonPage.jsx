@@ -28,6 +28,12 @@ function ButtonPage() {
       <Button primary="true" outline="true">
         Boton001
       </Button>
+      <Button onClick={handleClick}>
+        Boton001
+      </Button>
+      <Button>
+        BotonSinProps
+      </Button>
     </>
   );
 }

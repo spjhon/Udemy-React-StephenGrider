@@ -132,7 +132,7 @@ const variationClassMap = {
 
 
 
-function Button({ children, ...rest }) {
+/*function Button({ children, ...rest }) {
     //este componente tienen un error, si se deja vacio los props se tuesta el compoenente
 
     console.log(rest)
@@ -167,4 +167,39 @@ function Button({ children, ...rest }) {
     <button {...rest} className={buttonClasses}>{buttonIcon}{children}</button>
 )}
 
-export default Button;
+export default Button;*/
+
+
+
+function Button({ children, ...rest }) {
+    console.log(rest);
+  
+    const hasVariationKey = Object.keys(variationClassMap).some((key) => rest[key]);
+
+    // Check if there are any props passed
+    let buttonIcon = hasVariationKey ? variationClassMap[Object.keys(rest)[0]][1] : null;
+  
+    const variationClasses = Object.keys(variationClassMap).reduce((classes, prop) => {
+      if (rest[prop]) {
+        classes.push(variationClassMap[prop][0]);
+  
+        if (rest.outline) {
+          classes.push(`outlineAnd${prop}`);
+        }
+      }
+      return classes;
+    }, ["buttonBase"]);
+  
+    const buttonClasses = rest.className ? rest.className + " " + variationClasses.join(" ") : variationClasses.join(" ");
+  
+    return (
+      // Include the buttonIcon only if it is not null
+      <button {...rest} className={buttonClasses}>
+        {buttonIcon}
+        {children}
+      </button>
+    );
+  }
+  
+  export default Button;
+  

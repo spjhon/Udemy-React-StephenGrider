@@ -8,7 +8,7 @@ import AlbumsListItem from "./AlbumsListItem";
 function AlbumsList ({user}){
     const {data, error, isFetching} = useFetchAlbumsQuery(user);
     const [addAlbum, results] = useAddAlbumMutation();
-    const [removeAlbum, removeAlbumResult] = useRemoveAlbumMutation();
+    //const [removeAlbum, removeAlbumResult] = useRemoveAlbumMutation();
 
     const handleAddAlbum = () => {
         addAlbum(user);

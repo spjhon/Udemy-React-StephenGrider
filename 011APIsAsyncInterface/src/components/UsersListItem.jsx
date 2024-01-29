@@ -7,6 +7,7 @@ import AlbumList from "./AlbmsList";
 
 function UsersListItem ({user}) {
 
+    
     const [doRemoveUser, isLoading, error] = useThunk(removeUser);
 
     const handleClick = () => {
@@ -21,6 +22,7 @@ function UsersListItem ({user}) {
     {user.name}
     </>;
 
+//En este caso el albumList seria el children
     return (
         <ExpandablePanel header={header}>
             <AlbumList user={user}></AlbumList>

@@ -7,9 +7,12 @@ import { photosApi } from "./apis/photosApi";
 export const store = configureStore({
     reducer: {
         users: usersReducer,
+        //la palabra albums es la misma que se utiliza en el path de la api
+        //este [albumsApi.reducerPath] es una forma de evitar escribir albums: albumsApi.reducer
         [albumsApi.reducerPath]: albumsApi.reducer,
         [photosApi.reducerPath]: photosApi.reducer,
     },
+    //este middleware es codeigo que se agrega para poder que la api funcione
     middleware: (getDefaultMiddleware) => {
         return getDefaultMiddleware().concat(albumsApi.middleware).concat(photosApi.middleware);
     },

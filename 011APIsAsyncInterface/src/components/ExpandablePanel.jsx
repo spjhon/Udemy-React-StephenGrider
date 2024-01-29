@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
 function ExpandablePanel ({header, children}) {
-
+//se utiliza el state para saber si esta abierto o no y cerrarlo en otros casos
     const [expanded, setExpanded] = useState(false);
 
     const handleClick = () => {

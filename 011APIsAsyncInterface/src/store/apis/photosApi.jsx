@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
+//ojo que en la documentacion de redux puede aparecer sin el react y eso es un problema ya que no se crean los custom actions
 import { faker } from "@faker-js/faker";
 
 const photosApi = createApi ({

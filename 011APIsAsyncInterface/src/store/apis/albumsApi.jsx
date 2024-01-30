@@ -26,6 +26,10 @@ const albumsApi = createApi ({
             }),
 
             addAlbum: builder.mutation({
+                //Este es el tag system el cual lo que haces es hacer un refetching the toda la lista despues
+                //de haber agregado un elemento nuevo a la lista, esto con el fin de tener la info lo mas
+                //actualizada posible
+                //Re-fetching with tags
                 invalidatesTags: (result, error, user) => {
                     return [{ type: 'UsersAlbums', id: user.id}]
                 },

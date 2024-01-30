@@ -20,7 +20,7 @@ const usersSlice = createSlice({
             //Updtae our state object however appropriate
             // to show the user what we are loading data
             state.isLoading = true;
-            console.log(action)
+            //console.log(action)
         });
         builder.addCase(fetchUsers.fulfilled, (state, action) => {
             state.isLoading = false;

@@ -21,6 +21,7 @@ export const store = configureStore({
 //temporal
 //window.store = store;
 
+//setupListeners es tambien parte del boilerplate
 setupListeners(store.dispatch);
 
 

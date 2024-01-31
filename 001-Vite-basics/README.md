@@ -1,6 +1,6 @@
 # React + Vite
 
-## Ejercicio numero 1 del curso de udemy de react de Stephen Grider.
+## Ejercicio numero 1 del curso de udemy de react de Stephen Grider
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -17,21 +17,5 @@ Currently, two official plugins are available:
 - Tambien se explica como react captura el root del dom para renderizarlo
 - Curiosamente un input se puede editar en vivo sin necesidad de utilizar el (e)
 - Porfavor aplicar al menos las 5 reglas basicas de HTML.
-- Ojo con los numeros y letras y en donde deja pasar objects y en donde no a travez de los curlyes
-
-## Diagramas utilizados
-
-001-Bundle
-: Explica que react transforma todo los js en un solo bundle que manda al browser
-
-002-de js a html
-: Simple explicacion de como por medio de js se estrae el root y se renderiza con la funcion render de react.
-
-003-que es useState
-
-004-all the files that are inside a react template basic
-
-005-pequeño ejemplo de como bable pasa info
-
-
-![Bundle Image](./src/assets/diagrams/001-Bundle.jpg)
+- Ojo con los numeros y letras y en donde deja pasar objects y en donde no a traves de los curlyes
+- Se explica un componente funcional basico y como se divide en dos partes, la parte logica y la parte de return que es donde retorna el html en forma de jsx con las reglas de curly braces que dispone.

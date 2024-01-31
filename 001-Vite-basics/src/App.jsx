@@ -10,6 +10,8 @@ function App(){
       message = "Hello there!";
   }
 
+  //Ejemplo basico de como renderizar bajo una condicional, aqui se le da primero una condicional en donde se define
+  //lo que contenga la variable message.
   return <div>
       <h1>{message}, {random}</h1>
       <input style={{border: '3px solid red'}} type={types} min={mini} autoFocus={true} spellCheck/>

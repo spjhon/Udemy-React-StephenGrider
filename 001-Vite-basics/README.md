@@ -4,14 +4,9 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 ## Temas que se cubren
 
-## Tips
+### Tips
 
 - Por medio de esta pequeña app se demuestra como funciona jsx y las 5 reglas primarias a comparacion de HTML normal.
 - Tambien se explica como react captura el root del dom para renderizarlo
@@ -19,3 +14,8 @@ Currently, two official plugins are available:
 - Porfavor aplicar al menos las 5 reglas basicas de HTML.
 - Ojo con los numeros y letras y en donde deja pasar objects y en donde no a traves de los curlyes
 - Se explica un componente funcional basico y como se divide en dos partes, la parte logica y la parte de return que es donde retorna el html en forma de jsx con las reglas de curly braces que dispone.
+- (de gridder) react no puede imprimir (osea retornar del componente) otras cosas que no sean numeros y letras en las crulys {} de return, objetos no, arrays no, booleanos no; dentro de las curlyes se pueden meter funciones y llamadas pero que por supuesto terminen en primitivos como numeros y letras.
+- Lo que hace babel es que retorna un object con toda la info del componente como los children, el tipo de tag y otros.
+- Babel: Transforma JSX a javascript normal
+- WebPack: Crea todo el bundle, en Next js se utiliza TurboPack
+- React trata diferente a los Numbers, Strings, Null, Undefind y Booleanos a los Arrays y los Objects.

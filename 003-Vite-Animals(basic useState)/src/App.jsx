@@ -6,6 +6,7 @@ import { useState } from 'react';
 function getRandomAnimal(){
   const animals = ['bird', 'cat', 'cow', 'dog', 'gator', 'horse'];
 
+  //este return es simple es retgornar animals en su posicion (y se coloca una posicion random relativa a la longitud del array)
   return animals[Math.floor(Math.random() * animals.length)];
 }
 

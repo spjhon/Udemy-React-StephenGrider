@@ -15,3 +15,11 @@
 - Undefined no muestra nada en la pantalla si se manda a renderizar
 - Las imagenes png de menos de 9.7kb se mete de tipo in-line para ahorrar transmision de datos si es mas grande se trabaja ya como un archivo separado
 - Undefined no muestra nada en la pantalla si se manda a renderizar
+- Tip acerca de imagenes, las imagenes que son de menos de 5kb son convertidas a codigo e incluidas en el jsx de react.
+
+- De acuerdo a como exporte el componente es como se importa en otro lado:
+
+|  Syntax |            Export statement           |             Import statement            |
+|:-------:|:-------------------------------------:|:---------------------------------------:|
+| Default | `export default function Button() {}` | `import Button from './Button.js';`     |
+| Named   | `export function Button() {}`         | `import { Button } from './Button.js';` |

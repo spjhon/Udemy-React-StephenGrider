@@ -12,6 +12,7 @@ En este ejemplo del react de grider se explica y se aprenden trucos de:
 
 ### Tips
 
+- Los componentes en REACT siempre deben de tener una letra mayuscula al principio para diferenciarlos de elementos HTML normales.
 - Ojo con la inmutabilidad cuando se trabaja con los estados (recuerda el .slide() y el ...history en el ejemplo de tick-toc).
 - JavaScript tiene una particularidad, si un object tiene dos llaves con el mismo nombre, una sobre-escribe a la otra (LAS LLAVES EN LOS OBJECTS DEBEN DE SER UNICAS).
 - The **spread** syntax: The dots literally mean “gather the remaining parameters into an array”, cuando se utiliza como parametro
@@ -24,10 +25,15 @@ En este ejemplo del react de grider se explica y se aprenden trucos de:
 - Todo handleClick debe de ser definido en donde esta el state que modificay pasarlo por el sistema de props
 - Un underline element es un componente que el html que devuelve es el mismo que el nombre de la funcion y el nombre del componente.
 - Un componente no puede retormar mas de un tag, en caso de varios tags envolvelos en un wrapper or a fragment.
+- Se recomienda aplicar (ejemplo en github examples-react) atomic design in order to create the components.
+La destructuración con [] indica que se están destructurando arrays, mientras que si se utiliza {} es que se está destructurando un objects.
+- Se puede utilizar map para mapear todos los elementos que se encuentren en objetos, vengan de funciones, fetch, etc. (siempre agregar un key).
+- Un set en react es un peticion de hacer un re-render con los nuevos states.
+- En react los on son los eventos html que estan listados en w3schools.
 
 Esta es una guia practica de como utilizar un event:
 
-![text for screen reader](../gridder%20diapositivas/015%20Importando%20Imagenes.jpg)
+![text for screen reader](../gridder%20diapositivas/015%20Como%20manejar%20eventos%20como%20click.jpg)
 
 Anatomia basica de state:
 

@@ -27,9 +27,11 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - (de gridder) react no puede imprimir (osea retornar del componente) otras cosas que no sean numeros y letras en las crulys {} de return, objetos no, arrays no, booleanos no; dentro de las curlyes se pueden meter funciones y llamadas pero que por supuesto terminen en primitivos como numeros y letras.
 - Lo que hace babel es que retorna un object con toda la info del componente como los children, el tipo de tag y otros.
 - Babel: Transforma JSX a javascript normal
+- Una diferencia entre el JSX con HTML es que hay que cerrar todos los tags, y que solo se puede devolver un solo componente (envoltura).
 - WebPack: Crea todo el bundle, en Next js se utiliza TurboPack
 - React trata diferente a los Numbers, Strings, Null, Undefind y Booleanos a los Arrays y los Objects cuando se utilizan los curlyes en el return de la function del component.
 - No retorne un objeto como tal en la function o va a dar error
+- Para agregar estilo se utiliza className, no se utiliza class como en html normalmente se haria.
 
 #### Basic JSX rules
 

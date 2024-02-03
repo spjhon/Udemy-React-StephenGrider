@@ -11,6 +11,9 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - Que hay dentro de un projecto react (en este caso creado con vite)
 - Como react hace basico render desde un html como root
 - En que consiste un componente basico
+- Reglas de como pasar atributos html al componente e introduccion al sistema de props
+- Como colocar styles basicos al menos los que van in-line
+- Se explica como el sistema de imports y exports es escencial a la hora de modularizar los componentes
 
 ### Tips
 
@@ -29,10 +32,8 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 #### Basic JSX rules
 
-1. All prop names follow camelCase
+1. All prop names follow camelCase, esto es en especial para los atributos estandares del lenguaje HTML, en la consola de error de react un esLint basico es comprobar que los atributes estan escritos correctamente
 2. Number attributes use curly braces
 3. Boolean "true" can be written with just the property name. "false" should be written with curly braces
 4. The "class" attribute is written as "className"
 5. in-line styles are provided as objects
-
-![ alt text for screen readers](../gridder%20diapositivas/011%20ejemplo%20de%20como%20proveer%20boolean%20props.jpg "Text to show on mouseover")

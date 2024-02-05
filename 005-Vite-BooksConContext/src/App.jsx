@@ -10,6 +10,7 @@ function App() {
   const { fetchBooks, books  } = useContext(BooksContext)
 
   useEffect ( () => {
+    //ojo, este fetch data funciona gracias al useCallback en las funciones de fetch
     const fetchData = async () => {
       const result = await fetchBooks();
       console.log(result); // This will log the fetch

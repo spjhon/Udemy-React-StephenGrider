@@ -8,6 +8,9 @@ function Provider({children}){
   /*Desde este state es que se maneja toda la rama desde el input hasta como se reparten cada book*/
   const [books, setBooks] = useState ([]);
 
+  //el use callback es para que el useEffect guarde la memoria de la funcion y cada vez que se llame el useEffect no cree una funcion nueva
+  //y crea que se esta cambiando el dato y cree una nueva referencia de la funcion en la memoria por ello el useCallback
+  //que pasa si no utilizo useCallback?: 
   const fetchBooks = useCallback(async () => {
     const response = await axios.get('http://localhost:3001/books');
     setBooks(response.data);

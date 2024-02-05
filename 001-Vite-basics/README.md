@@ -29,7 +29,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - Babel: Transforma JSX a javascript normal
 - Una diferencia entre el JSX con HTML es que hay que cerrar todos los tags, y que solo se puede devolver un solo componente (envoltura).
 - WebPack: Crea todo el bundle, en Next js se utiliza TurboPack
-- React trata diferente a los Numbers, Strings, Null, Undefind y Booleanos a los Arrays y los Objects cuando se utilizan los curlyes en el return de la function del component.
+- React trata diferente a los Numbers, Strings, Null, Undefind y Booleanos a los Arrays y los Objects para cuando se utiliza el state, entonces con los arrays y los objects toca hacer una copia con el ...
 - No retorne un objeto como tal en la function o va a dar error
 - Para agregar estilo se utiliza className, no se utiliza class como en html normalmente se haria.
 

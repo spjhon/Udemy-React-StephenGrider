@@ -19,9 +19,6 @@ function App() {
   }, []);
 
 
-
-
-
   //para agregar un elemento a mitad de array sin cagarla se utiliza .slice()
   //para removerlos se utiliza un metodo propio de javascript llamado filter
   const CreateBook = async (title) => {

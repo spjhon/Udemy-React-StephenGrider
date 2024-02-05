@@ -59,6 +59,7 @@ function App() {
 
   const editBookById = async (id, newTitle) => {
 
+    //
     const response = await axios.put(`http://localhost:3001/books/${id}`, {title: newTitle});
 
     console.log(response);
@@ -66,6 +67,8 @@ function App() {
 
     const updatedBooks = books.map((book) => {
       if (book.id === id){
+        //EL RESPONSE.DATA se utiliza ya que si se utiliza el metodo del ejercicio anterior, se puede generar un bug
+        //entonces es mejor tener la info mas actualizada que sea posible
         return {...book, ...response.data}; /*aqui se aplica una particularidad de los objects y es que las keys no pueden repetir nombres*/
       }
       return book;

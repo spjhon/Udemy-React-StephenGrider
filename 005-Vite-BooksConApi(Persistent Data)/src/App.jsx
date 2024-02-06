@@ -14,6 +14,11 @@ function App() {
     setBooks(response.data)
   };
 
+  //In this case, since fetchBooks is defined within the 
+  //component and doesn't depend on any prop or state, there is no need to memoize it using useCallback.
+  //In this component, the fetchBooks function is defined inside the component itself. Since it is not 
+  //passed down as a prop or consumed from context, it is a local function, and its reference will not change between renders. 
+  //Therefore, there is no need to use useCallback in this case.
   useEffect(() => {
     fetchBooks();
   }, []);

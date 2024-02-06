@@ -7,19 +7,19 @@ Es el ejercicio anterior acerca de crear tarjetas con info que se crea en un for
 ### Temas Tratados
 
 - Introduccion al sistema de context
-- useCallback y su uso dentro de useEffect
+- useCallback y su uso dentro de useEffect para hacer fetching
 
 ## Tips
 
 Va en tres fases:
 
 1. Crear context.
-2. Specify the data that will be shared
-3. "Consume" the data in a component
+2. Specify the data that will be shared.
+3. "Consume" the data in a component.
 
 - Se utiliza un provider: Component used to specify what data we want to share.
 - Context no es remplazo de Redux, redux es organizacion de info, context es como distribuirla.
-- Gracias a context se puede compartir no solo un state sino funciones y otras cosas que se transmite en forma de object a travez del provider
+- Gracias a context se puede compartir no solo un state sino funciones y otras cosas que se transmite en forma de object a travez del provider.
 
 ## Using Context Diagram
 

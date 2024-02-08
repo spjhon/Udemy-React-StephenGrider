@@ -170,7 +170,7 @@ const variationClassMap = {
 export default Button;*/
 
 
-
+//Acuerdese el ...rest es el resto de los props que se puedan agregar
 function Button({ children, ...rest }) {
     console.log(rest);
   

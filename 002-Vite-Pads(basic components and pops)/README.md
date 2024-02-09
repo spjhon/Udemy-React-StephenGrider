@@ -3,10 +3,12 @@
 ## Temas tratados
 
 - Como reutilizar un componente y que este componente se adapte a la forma que uno desea y estos deseos se comunican a travez del sistema de props.
-- Conditional rendering
+- Como colocar styles basicos al menos los que van in-line
+- Valores predeterminados en los props en caso de que no llegue ningun prop.
 - Utilizacion de una libreria para el estilizado llamada Bulma
 - Se explica la jerarquia de los componente y que es un componente padre y que es un componente children
 - Introduccion a destructuring
+- Se explica como el sistema de imports y exports es escencial a la hora de modularizar los componentes
 
 ### Tips
 
@@ -23,3 +25,6 @@
 |:-------:|:-------------------------------------:|:---------------------------------------:|
 | Default | `export default function Button() {}` | `import Button from './Button.js';`     |
 | Named   | `export function Button() {}`         | `import { Button } from './Button.js';` |
+
+- How React render the root in the html
+![Link](../gridder%20diapositivas/002%20del%20js%20al%20html.jpg)

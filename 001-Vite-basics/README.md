@@ -10,13 +10,13 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - JSX y sus diferencias con HTML
 - Que hay dentro de un projecto react (en este caso creado con vite)
 - Como react hace basico render desde un html como root
-- En que consiste un componente basico
+- Que es un componente y sus dos partes principales
+- Como react se importa y se inyecta en el projecto
 - Reglas de como pasar atributos html al componente e introduccion al sistema de props
-- Como colocar styles basicos al menos los que van in-line
-- Se explica como el sistema de imports y exports es escencial a la hora de modularizar los componentes
 
 ### Tips
 
+- Se recomienda saber como funciona el sistema de imports y exports de javascript
 - Un componente en REACT es una funcion que retorna HTML al DOM virtual.
 - Por medio de esta pequeña app se demuestra como funciona jsx y las 5 reglas primarias a comparacion de HTML normal.
 - Tambien se explica como react captura el root del dom para renderizarlo

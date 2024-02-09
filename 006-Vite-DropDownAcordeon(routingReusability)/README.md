@@ -22,7 +22,7 @@ En esta app hay varios temas tratados en una sola, se trata de una pagina princi
 
 ### Accordeon
 
--
+- Con este Ejercico es que se explica como aplicarle state a un componente, los pasos para saber que tipo de state necesita
 
 ### Routing en pasos
 

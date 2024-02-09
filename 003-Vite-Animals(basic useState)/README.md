@@ -31,10 +31,11 @@ La destructuración con [] indica que se están destructurando arrays, mientras 
 - Un set en react es un peticion de hacer un re-render con los nuevos states.
 - En react los on son los eventos html que estan listados en w3schools.
 
-Esta es una guia practica de como utilizar un event:
-
+- Esta es una guia practica de como utilizar un event:
 ![text for screen reader](../gridder%20diapositivas/015%20Como%20manejar%20eventos%20como%20click.jpg)
 
-Anatomia basica de state:
+- Que es state?:
+![anatomia basica state](../gridder%20diapositivas/003%20que%20es%20useState.jpg)
 
+- Anatomia basica de state:
 ![anatomia basica state](../gridder%20diapositivas/017%20anatomia%20basica%20de%20useState.jpg)

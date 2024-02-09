@@ -38,26 +38,3 @@ Esta es una guia practica de como utilizar un event:
 Anatomia basica de state:
 
 ![anatomia basica state](../gridder%20diapositivas/017%20anatomia%20basica%20de%20useState.jpg)
-
-### Component Lifecicle
-
-In React, the term "lifecycle" refers to the various stages a component goes through during its existence. Understanding the lifecycle of a React functional component is crucial for managing component behavior, side effects, and updating the user interface. With the introduction of React Hooks, functional components can now use state and lifecycle features traditionally associated with class components. Let's explore the functional perspective of React component lifecycle.
-
-1. **Mounting Phase:**
-   - **`useEffect` (componentDidMount):** This hook is called after the component has been rendered to the DOM. It is often used for tasks like fetching data or setting up subscriptions. The code inside `useEffect` runs once after the initial render.
-
-2. **Updating Phase:**
-   - **`useEffect` (componentDidUpdate):** This hook is called after each render when the component updates. It's helpful for handling side effects that depend on the current state or props.
-
-3. **Unmounting Phase:**
-   - **`useEffect` (componentWillUnmount):** This hook is used for cleaning up when a component is about to be removed from the DOM. It runs before the component is unmounted.
-
-4. **Error Handling:**
-   - **`useEffect` (componentDidCatch):** This hook is used for catching JavaScript errors anywhere in a component tree. It works like a JavaScript catch block but for components.
-
-5. **Special Cases:**
-   - **`useEffect` with empty dependency array:** If you pass an empty dependency array (`[]`) as the second argument to `useEffect`, it simulates the behavior of `componentDidMount`, as the effect will only run once after the initial render.
-
-   - **`useEffect` with cleanup function:** By returning a function from the `useEffect`, you can implement cleanup logic, simulating `componentWillUnmount`. This cleanup function is run when the component is unmounted or when the dependencies change.
-
-Functional components, with the help of Hooks like `useState` and `useEffect`, provide a more concise and modular way of handling component lifecycle compared to class components. The `useEffect` hook is particularly versatile, covering aspects of both mounting and updating phases. Understanding these functional perspectives allows you to manage state and side effects effectively in React components.

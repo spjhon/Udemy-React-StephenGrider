@@ -121,11 +121,11 @@ Button.propTypes = {
 };
 
 const variationClassMap = {
-  primary: ["primary", <HiBeaker key={0}/>],
-  secondary: ["secondary", <HiBell key={1}/>],
-  success: ["success", <HiCheck key={2}/>],
-  warning: ["warning", <HiBan key={3}/>],
-  danger: ["danger", <HiEmojiSad key={4}/>],
+  primary: ["primary", <HiBeaker key={"primary"}/>],
+  secondary: ["secondary", <HiBell key={"secondary"}/>],
+  success: ["success", <HiCheck key={"success"}/>],
+  warning: ["warning", <HiBan key={"warning"}/>],
+  danger: ["danger", <HiEmojiSad key={"danger"}/>],
   rounded: ["rounded", null],
   outline: ["outline", null],
 };
@@ -172,7 +172,7 @@ export default Button;*/
 
 //Acuerdese el ...rest es el resto de los props que se puedan agregar
 function Button({ children, ...rest }) {
-    console.log(rest);
+    
   
     const hasVariationKey = Object.keys(variationClassMap).some((key) => rest[key]);
 
@@ -189,7 +189,7 @@ function Button({ children, ...rest }) {
       }
       return classes;
     }, ["buttonBase"]);
-  
+   
     const buttonClasses = rest.className ? rest.className + " " + variationClasses.join(" ") : variationClasses.join(" ");
   
     return (

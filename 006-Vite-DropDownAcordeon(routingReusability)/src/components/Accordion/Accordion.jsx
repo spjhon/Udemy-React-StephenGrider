@@ -4,6 +4,8 @@ import "./Accordion.css"
 
 function Accordion ({items}) {
 
+    //el State comienza en -1 para que todos esten cerrados, ya que si se emieza ya sea con 0 o 1
+    // va a abrir
     const [expandedIndex, setExpandedIndex] = useState(-1);
 
 

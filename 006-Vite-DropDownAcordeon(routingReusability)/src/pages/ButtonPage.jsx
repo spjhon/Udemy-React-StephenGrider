@@ -7,7 +7,7 @@ function ButtonPage() {
   }
   return (
     <>
-      <Button primary="true" outline="true" onClick={handleClick}>
+      <Button primary onClick={handleClick}>
         Boton001
       </Button>
 

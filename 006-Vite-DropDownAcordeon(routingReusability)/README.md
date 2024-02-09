@@ -12,12 +12,19 @@ En esta app hay varios temas tratados en una sola, se trata de una pagina princi
 - Internal Link
 - Hook useNavigation
 
-### Reusability
+## Tips Reusability (buttons, accordeon, dropdown, modal, table)
+
+### Button
 
 - How to use props to configure buttons
 - The children Prop: cuando se agarra el props object, children entra como una llave en conjunto con el resto de atributos, por eso se necesita el ...rest para cuando se destructura el children.
+- Tener en cuenta en el componente del boton otros props que puedan venir de quien este reutilizando el boton dentro del a app
 
-## Tips
+### Accordeon
+
+-
+
+### Routing en pasos
 
 Para hacerlo desde 0 sin utilizar librerias
 
@@ -33,5 +40,3 @@ Para hacerlo desde 0 sin utilizar librerias
 - Se crea tambien un archivo llamado Link, esta funcion (componente) es la que se va a usar en los anchor para la navegacion interna dentro de la app.
 
 - Diagrama de como funciona routing [Link](../gridder%20diapositivas/046%20how%20navigation%20works.jpeg)
-
-### Routing en pasos

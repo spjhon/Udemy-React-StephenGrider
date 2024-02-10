@@ -9,7 +9,7 @@ function DropdownPage () {
 
   const handleSelection = (option) => {
     setSelection(option)
-    console.log(selection)
+    
   }
 
   //LA FORMA ES QUE SE ESTAN PASANDO ESTROS PROPS ES PARA QUE NO SE ALARGE LA COSA

@@ -23,6 +23,22 @@ En esta app hay varios temas tratados en una sola, se trata de una pagina princi
 ### Accordeon
 
 - Con este Ejercico es que se explica como aplicarle state a un componente, los pasos para saber que tipo de state necesita
+- Los estados del acordeon son simples, solo esta expandido o no y en donde debe de estar expandido
+- Se aplica logica de conditional rendering
+- Se explica un bug al momento de actualizar un state y el fix es aplicar una forma funcional de actualizacion del state
+
+### Dropdown
+
+- El dropdown es un componente que puede llegar a ser bastante complejo
+- Se utiliza el hook useRef para hacer una referencia al div seleccionado y saber si se esta dando click fuera del dorpdown
+- When a piece of information is used for rendering, keep it in state. When a piece of information is only needed by event handlers and changing it doesn’t require a re-render, using a ref may be more efficient.
+- Como las faces de captura y bubble afectan ya que react es mas rapido que estas faces y se pueden llegar a presentar problemas.
+
+- **Cuando Utilizar useRef?:**
+
+- Typically, you will use a ref when your component needs to “step outside” React and communicate with external APIs—often a browser API that won’t impact the appearance of the component.
+- React doesn’t care what you do with the ref or its contents.
+- The most common use case for a ref is to access a DOM element.
 
 ### Routing en pasos
 

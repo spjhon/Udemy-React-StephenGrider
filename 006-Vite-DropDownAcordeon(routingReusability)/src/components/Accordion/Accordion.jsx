@@ -28,6 +28,13 @@ function Accordion ({items}) {
         })
     };
 
+    //La comparacion que se hace en este ejercicio es:
+    // - Se ingresa todo el array de items (el object del componente padre) y se va por cada item
+    // - Cada item tiene dos pedasos, y se utiliza info que esta fuera del map que es expandedIndex
+    // - En caso de que iexpandedIndex traiga un valor que sea igual al index que se esta mapeando, se agrega un div con la info
+    // que trae el item que son dos pesasos y queda un solo pedaso
+    // - Al final en una sola variable llamada renderedItems esta una serie de divs que siempre van a tener el titulo
+    // - y si el expandedIndex es igual se agrega al div, un div interno con el segundo pedazo del item.
     const renderedItems = items.map((item, index) => {
 
         /*  if (index === expandedIndex){
@@ -48,7 +55,7 @@ function Accordion ({items}) {
             //aqui toca mirar las reglas condicionales, condicional rendering, los && y el condiconal or)
         const content = isExpanded && <div className="Accordion__content">{item.content}</div>
     
-
+//
         return (
         <div key={item.id}>
             <div className="Accordion__body" onClick={() => handleClick(index)}>{icon} {item.label}</div>

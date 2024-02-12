@@ -6,11 +6,15 @@ import ButtonPage from "./pages/ButtonPage";
 import ModalPage from "./pages/ModalPage";
 import TablePage from "./pages/TablePage";
 
+
+/*ALGORITMO
+- Al cargar la app se cargan los el div principal y el sidebar
+- Se carga una serie de componentes llamados route que pasa un prop y de acuerdo al path va a renderizar lo que esta envuelto
+*/
 function App() {
   return (
     <div>
 
-      
       <SideBar></SideBar>
       
       <div id="pages">

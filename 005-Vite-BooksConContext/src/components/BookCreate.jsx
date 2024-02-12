@@ -7,6 +7,8 @@ import BooksContext from "../context/books";
 const BookCreate = () => {
 
     const [title, setTitle] = useState('');
+    // Esta linea esta diciendo que importe la funcion createBook que esta exportada en el context
+    // de bookContext y es importada gracias a useContext, esto se puede mandar a un custom hook
     const {createBook} = useContext(BooksContext);
 
     const handleFormSubmit = (event) => {

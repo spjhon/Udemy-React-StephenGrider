@@ -40,7 +40,13 @@ En esta app hay varios temas tratados en una sola, se trata de una pagina princi
 - React doesn’t care what you do with the ref or its contents.
 - The most common use case for a ref is to access a DOM element.
 
+### Modal
+
+- El modal el secillo pero hay dos trucos que se deben saber que es el como controlar el overflow y como utilizar portals debido a que el componente...
+
 ### Routing en pasos
+
+Para hacer routing y navegacion en react se utiliza el sitema de context, con el se crea un state para saber en donde se esta posicionado, un hook llamado useNavigation que permite conectarse al context y modificarlo, entonces por medio de un SideBar que mapea los links, estos links son un componente que que administra las rutas y se invoca el context, tambien existe un route que se encarga de renderizar solo la ruta que se encuentra en el navegador, mas informacion en los ALGORITMOS de cada componente
 
 Para hacerlo desde 0 sin utilizar librerias
 
@@ -55,4 +61,7 @@ Para hacerlo desde 0 sin utilizar librerias
 
 - Se crea tambien un archivo llamado Link, esta funcion (componente) es la que se va a usar en los anchor para la navegacion interna dentro de la app.
 
-- Diagrama de como funciona routing [Link](../gridder%20diapositivas/046%20how%20navigation%20works.jpeg)
+- Tener en cuenta la navegacion programatica que es por ejemplo cuando se redirecciona despues de alguna accion o despues de un intervalo de tiempo
+
+- Diagrama de como funciona routing
+![Link](../gridder%20diapositivas/046%20how%20navigation%20works.jpeg)

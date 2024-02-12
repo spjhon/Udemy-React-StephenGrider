@@ -21,7 +21,7 @@ Va en tres fases:
 - Context no es remplazo de Redux, redux es organizacion de info, context es como distribuirla.
 - Gracias a context se puede compartir no solo un state sino funciones y otras cosas que se transmite en forma de object a travez del provider.
 
-## Using Context Diagram
+## Context paso a paso
 
 give me an example of each of this steps to create a context in react:
 

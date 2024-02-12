@@ -1,6 +1,19 @@
 // import Table from "../components/Table";
 import SortableTable from "../components/Table/SortableTable";
 
+/* LO QUE ENTRA
+No entran props
+
+ALGORITMO
+- Se crea el array de objects data que contiene los datos a ser mostrados en la tabla pero que primero van a ser filtrados en el
+componente SortableTable y luego si enviados al componente Table
+- Se crea un arrays de objects llamado config que contiene la configuracion a aplicar en el SortableTable para generar la tabla a mostrar final
+- Se crea una key function con el fin de generar una key para el map del componete siguiente
+
+LO QUE RETORNA
+- Retorna un div que llama el comonente SortableTable y pasa los props de los datos de la tabla, los datos sobre como configurar la tabla y la llave para el mapeado de los datos
+*/
+
 function TablePage() {
 
     const data = [
@@ -16,7 +29,7 @@ function TablePage() {
     const config = [
         {
         label: 'Name Fruit',
-        //en esta funcion arrow la utilize de manera que muestr que cuando se utiliza el {}, se debe de utilizar el return
+        //en esta funcion arrow la utilize de manera que muestra que cuando se utiliza el {}, se debe de utilizar el return
         render: (fruit) => {return fruit.name},
         sortValue: (fruit) => fruit.name
         },
@@ -39,7 +52,7 @@ function TablePage() {
     //esta funcion es para extraer facilmente la llave de los datos entrantes y pasarlos a los maps en donde
     //se utilicen
     //ojo, este key va solo al retorno final de cada fruit en este caso, no a las celdas individuales
-    //la ventaja de esta funcion es que se le puede cambiar el tipo de elemento que desa ordenar con tan 
+    //la ventaja de esta funcion es que se le puede cambiar el tipo de elemento que desea ordenar con tan 
     //solo cambiar el object
     const keyFn = (fruit) => {
         return fruit.name;

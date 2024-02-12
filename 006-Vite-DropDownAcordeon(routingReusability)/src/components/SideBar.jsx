@@ -15,6 +15,7 @@ function SideBar() {
         {label: 'Buttons', path: '/buttons'},
         {label: 'Modal', path: '/modal'},
         {label: 'Table', path: '/table'},
+        {label: 'Counter', path: '/counter'},
     ];
 
     // Mapeo de la lista de enlaces para renderizar cada enlace utilizando el componente Link.

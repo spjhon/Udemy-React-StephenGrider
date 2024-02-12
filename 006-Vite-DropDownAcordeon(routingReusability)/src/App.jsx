@@ -5,6 +5,7 @@ import SideBar from "./components/SideBar";
 import ButtonPage from "./pages/ButtonPage";
 import ModalPage from "./pages/ModalPage";
 import TablePage from "./pages/TablePage";
+import CounterPage from './pages/CounterPage';
 
 
 /*ALGORITMO
@@ -47,6 +48,10 @@ function App() {
         <TablePage>
 
         </TablePage>
+      </Route>
+
+      <Route path="/counter">
+          <CounterPage initialCount={10} />
       </Route>
 
       </div>

@@ -1,10 +1,34 @@
 import { Fragment } from "react";
 
+/*
+LO QUE ENTRA
+- dataProp: Un array de objetos que contiene los datos a ser mostrados en la tabla.
+- configProp: Un array de objetos que contiene la configuración de cada columna de la tabla.
+- keyFn: Una función que genera una clave única para cada elemento en el array de datos.
+*/
+
+/*
+ALGORITMO
+- Se renderiza la tabla con sus encabezados y filas de acuerdo a los datos y configuración proporcionados.
+- Los encabezados y celdas son personalizables mediante la configuración dada en configProp.
+*/
+
+/*
+LO QUE RETORNA
+- Retorna un componente de tabla que muestra los datos proporcionados de acuerdo a la configuración dada.
+*/
+
 function Table ({dataProp, configProp, keyFn}) {
 
     /* <th className="p-3">{configProp[0].render(fruit)}</th>
     <th className="p-3">{configProp[1].render(fruit)}</th>
     <th className="p-3">{configProp[2].render(fruit)}</th> */
+
+    /*
+    En lugar de renderizar manualmente cada th, se utiliza el método map para recorrer la configuración de columnas (configProp).
+    Si una columna tiene una función header definida, se utiliza; de lo contrario, se muestra el label de la columna.
+    El resultado es un array de elementos th personalizados.
+    */
 
     //Este codigo y el configProp que pasa es para darle una amplia reusabilidad a la tabla
 
@@ -20,6 +44,12 @@ function Table ({dataProp, configProp, keyFn}) {
 
         return <th key={column.label}>{column.label}</th>
     });
+
+    /*
+    Se utiliza map para recorrer los datos (dataProp).
+    Dentro de cada iteración, se utiliza otro map para recorrer la configuración de columnas (configProp) y renderizar cada celda.
+    El resultado es un array de filas (tr) con celdas (td) personalizadas según la configuración.
+    */
 
     //LO QUE SE ESTA HACIENDO AL SEPARAR RENDEREDROWS DE RENDEREHEADERS:
 
@@ -40,6 +70,9 @@ function Table ({dataProp, configProp, keyFn}) {
         )
     });
 
+    /*
+    Finalmente, se retorna el componente de tabla con los encabezados y filas renderizados según la configuración y datos proporcionados.
+    */
     return (<table className="table-auto border-spacing-3">
         <thead>
         <tr className="border-b-2">

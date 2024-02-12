@@ -43,6 +43,20 @@ En esta app hay varios temas tratados en una sola, se trata de una pagina princi
 ### Modal
 
 - El modal el secillo pero hay dos trucos que se deben saber que es el como controlar el overflow y como utilizar portals debido a que el componente...
+- Para eso se utiliza el inset-0 para que el background cubra todo el fondo y utilizar useEffect para aplicar un overflow a toda la pagina y la utilizacion de portals
+
+### Table
+
+- Se aprende acerca de como crear una tabla reutilizable sin importar la cantidad de datos o las columnas o lo que se quiera sortear
+- Se aprende acerca de fragments y el uso de fragments a maps que no necesiten una key como tal como esta tabla de ejemplo
+
+### Como crear un custom hook
+
+1. Encontrar codigo que este relacionado con una sola pieza de state
+2. Copiar y pegar todo dentro de la funcion de ayuda (osea el otro file)
+3. Arreglar todas las referencias rotas
+
+- En el video 285 de grider se convierte la funcion de sorting de la tabla en un custom hook, en este codigo no se hizo ese cambio
 
 ### Routing en pasos
 

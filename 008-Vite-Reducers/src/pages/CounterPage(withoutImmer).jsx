@@ -6,6 +6,22 @@ const DECREMENT_COUNT = 'decrement';
 const ADD_VALUE_TO_COUNT = 'add_value_to_count';
 
 
+/*LO QUE ENTRA
+- En este ejemplo tenemos una constante function llamada reducer que es el primer argumento del useReducer y mas abajo un componente que utiliza el useState
+y la constante reducer como primer argumento y la STORE como segundo argumento.
+- El reducer es una funcion que le entra el state actual del las variables y un action que es lo que se 
+dispatch desde donde se utiliza el reducer, este action posee TYPE y PAYLOAD, el state es casi siempre un object
+con diferentes tipos de state ya sean arrays, integers u otros objects.
+
+ALGORITMO DEL REDUCER
+- De acuerdo al type se ejecuta una action sobre el state (recordar que este action viene un type y un payload)
+
+LO QUE RETORNA
+- La idea es que siempre que se invoque un reducer que es que llegue un type y un payload bien definido, pero en el caso que no
+pues que devuelva el state actual y listo, no hay re-renderizados
+
+*/
+
 //SE CREA EL REDUCER
 //Como funciona el reducer: el state es el state viejo, por eso para no modificar el state se utiliza el retorno de un nuevo object. El ...state y el action
 //que es lo que viene desde el dispatch y actualiza en este caso lo que venga en payload, por eso en redux va un payload y un type
@@ -57,6 +73,19 @@ const reducer = (state, action) => {
     return state; */
 };
 
+/*LO QUE ENTRA
+- Entra el initialCount que es el prop que viene desde la invocacion del componente
+
+ALGORITMO
+- Se utiliza useReducer para crear la STORE en donde se van a almacenar el state que la constante function llamada reducer va 
+a modificar
+- Se destructura del useReducer el state y el dispatch, el state es para utilizar el state en alguna parte del componente,
+el dispatch es para mandar ordenes al reducer y hacer modificaciones 
+
+LO QUE RETORNA
+- El componente retorna el jsx basico para el funcionamiento del counter
+
+*/
 function CounterPage ({initialCount}) {
     // const [count, setCount] = useState(initialCount);
     // const [valueToAdd, setValueToAdd] = useState(0)

@@ -1,12 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { reset } from "../actions";
 
+/*LO QUE ENTRA
+- Importa la función createSlice de "@reduxjs/toolkit".
+- Importa la acción reset desde el módulo "../actions".
+
+ALGORITMO
+- Utiliza createSlice para crear un slice llamado "song" con un initialState vacío (un array vacío en este caso) y tres reducers: addSong, removeSong, y un extra reducer para el caso de la acción reset.
+  - El reducer addSong agrega una canción al estado (state) utilizando el payload de la acción.
+  - El reducer removeSong elimina una canción del estado según el payload de la acción.
+  - El extra reducer está diseñado para escuchar la acción reset (fuera de las acciones propias del slice) y resetear el estado a un array vacío.
+
+LO QUE RETORNA
+- Exporta dos acciones (action creators) llamadas addSong y removeSong, que pueden ser utilizadas para despachar las acciones respectivas.
+- Exporta el reducer songsReducer que maneja el estado del slice.
+*/
+
 //cada slice se puede considerar como un state con reducers que se relacionan entre si
 const songsSlice = createSlice ({
     //por ejemplo en esta referencia cuando se ejecuta el reducer desde otro lado que utilizan el "song/addSong"
     // es la ejecucion de este slice, 
-    //osea cuando se depacha un dispatch con esta estructura 'song' + '/' + 'addSong' se sabe qie funcion
-    //ejecutar
+    //osea cuando se depacha un dispatch con esta estructura 'song' + '/' + 'addSong' desde algun componente que utilice useDispatch se sabe que funcion
+    //ejecutar en este slice
 
     //otra cosa, se utiliza el push y otras cosas en este lugar gracias a que immer viene incluiido en redux
     name: "song",
@@ -34,7 +49,7 @@ const songsSlice = createSlice ({
     //buscar por adicional action types ademas de los de arriba
     //la idea de este extra reducer es para escuchar dispatch que no esta asociado al reducer como tal
     extraReducers(builder) {
-        //entonces el addCase es propio de javascript y se le agrega el reset es el action type de "movie/reset" y el segundo argumento es
+        //por medio del addcase se le agrega el reset es el action type de "movie/reset" y el segundo argumento es
         //una funcion arrow que es la misma funcion de arriba en donde le entra el action y el state y luego se retorna el empty
         //el builder seria el state
         //de chatGPT: This function is used to define additional reducer logic that responds to other action types outside of the slice's own actions.

@@ -2,6 +2,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { createRandomSong } from "../data/index";
 import { addSong, removeSong, /*store*/ } from "../store";
 
+/*LO QUE ENTRA
+- Importa las funciones useDispatch y useSelector de "react-redux".
+- Importa la función createRandomSong desde el módulo "../data/index".
+- Importa las acciones addSong, removeSong y store desde el módulo "../store".
+
+ALGORITMO
+- Utiliza useDispatch para obtener la función de despacho del store de Redux.
+- Utiliza useSelector para obtener la lista de canciones (songPlaylist) del estado del store de Redux.
+- Declara funciones handleSongAdd y handleSongRemove que, respectivamente, añaden y eliminan canciones de la lista de reproducción de canciones utilizando las acciones addSong y removeSong.
+- Mapea la lista de canciones (songPlaylist) para renderizar cada canción con un botón de eliminación.
+
+LO QUE RETORNA
+- Retorna un componente funcional llamado SongPlaylist.
+  - Contiene un título, "Song Playlist", y un botón para agregar una canción aleatoria a la lista de reproducción.
+  - Renderiza la lista de reproducción de canciones con un botón de eliminación para cada canción.
+  - Utiliza las funciones handleSongAdd y handleSongRemove para gestionar las acciones relacionadas con las canciones.
+*/
+
+
 function SongPlaylist() {
   // To Do:
   // Get list of songs

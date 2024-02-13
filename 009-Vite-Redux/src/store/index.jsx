@@ -2,7 +2,18 @@ import { songsReducer, addSong, removeSong } from "./slices/songsSlice";
 import { moviesReducer, addMovie, removeMovie } from "./slices/moviesSlice";
 import { configureStore } from "@reduxjs/toolkit"
 
+/*LO QUE ENTRA
+- Importa las funciones y reducers relacionados con las listas de canciones y películas desde sus respectivos slices.
+- Importa la función configureStore de @reduxjs/toolkit.
 
+ALGORITMO
+- Se define un store utilizando configureStore que tiene un objeto reducer con dos propiedades: songs y movies. Cada propiedad tiene asignado su respectivo reducer (songsReducer y moviesReducer).
+- Se exporta el store, así como las funciones addSong, removeSong, addMovie y removeMovie.
+
+LO QUE RETORNA
+- Retorna un store de Redux que almacena el estado de la aplicación, con reducers específicos para las listas de canciones y películas.
+- También exporta funciones que actúan como acciones para agregar y eliminar canciones y películas del estado del store.
+*/
 
 //este es el store donde se guarda todo el state
 const store = configureStore ({

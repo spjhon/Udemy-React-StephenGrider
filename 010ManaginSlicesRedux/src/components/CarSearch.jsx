@@ -18,33 +18,31 @@ LO QUE RETORNA
   - Actualiza el término de búsqueda en el store al cambiar el valor en el campo de entrada.
 */
 
-function CarSearch () {
-    const dispatch = useDispatch();
+function CarSearch() {
+  const dispatch = useDispatch();
 
-    const searchTerm = useSelector((state) => {
-        return state.cars.searchTerm;
-    });
+  const searchTerm = useSelector((state) => {
+    return state.cars.searchTerm;
+  });
 
-    const handleSearchTermChange = (event) => {
-        dispatch (changeSearchTerm(event.target.value));
-    };
+  const handleSearchTermChange = (event) => {
+    dispatch(changeSearchTerm(event.target.value));
+  };
 
-    return (
+  return (
     <div className="list-header">
-        <h3 className="title is-3">My Cars</h3>
+      <h3 className="title is-3">My Cars</h3>
 
-        <div className="search field is-horizontal">
-            <label className="label">Search</label>
-            <input
-                className="input"
-                value={searchTerm}
-                onChange={handleSearchTermChange}
-            ></input>
-        </div>
-
+      <div className="search field is-horizontal">
+        <label className="label">Search</label>
+        <input
+          className="input"
+          value={searchTerm}
+          onChange={handleSearchTermChange}
+        ></input>
+      </div>
     </div>
-    )
-    
-};
+  );
+}
 
 export default CarSearch;

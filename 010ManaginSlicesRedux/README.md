@@ -20,3 +20,5 @@ Es un ejemplo de como manejar los slices y redux con otro ejemplo de practica qu
 ## Tips
 
 - Otra forma de ver los extraReducers es que por ejemplo en el ejercicio 10 de grider como se utilizan los extra reducers para comunicarse entre slices, si por ejemplo se dispara un dispatch desde otro slice, este slice haga un cambio de state
+
+- Hacer la logica de filtrado de datos del state en useSelector para que aparezca en el DevTools

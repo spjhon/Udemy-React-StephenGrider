@@ -19,10 +19,8 @@ LO QUE RETORNA
   - Muestra el costo total en un elemento div con la clase "car-value".
 */
 
-
-function CarValue () {
-
-        /* Esta es otra forma de desctructuring
+function CarValue() {
+  /* Esta es otra forma de desctructuring
     const totalCost = useSelector((state) => {
         const filteredCars = state.cars.carsData.filter((car) => {
             return car.name.toLowerCase().includes(state.cars.searchTerm.toLowerCase());
@@ -37,25 +35,21 @@ function CarValue () {
     });
     */
 
-    const totalCost = useSelector(({cars: {carsData, searchTerm}}) => {
-        const filteredCars = carsData.filter((car) => {
-            return car.name.toLowerCase().includes(searchTerm.toLowerCase());
-        });
-
-        let cost = 0;
-
-        for (let car of filteredCars){
-            cost += car.cost
-        }
-        return cost;
+  const totalCost = useSelector(({ cars: { carsData, searchTerm } }) => {
+    
+    const filteredCars = carsData.filter((car) => {
+      return car.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
-    return (
-    <div className="car-value">
-        Total Cost: ${totalCost}
-    </div>
-    )
-    
-};
+    let cost = 0;
+
+    for (let car of filteredCars) {
+      cost += car.cost;
+    }
+    return cost;
+  });
+
+  return <div className="car-value">Total Cost: ${totalCost}</div>;
+}
 
 export default CarValue;

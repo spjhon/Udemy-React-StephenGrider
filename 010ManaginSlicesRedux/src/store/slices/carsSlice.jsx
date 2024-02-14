@@ -1,9 +1,26 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
+/*LO QUE ENTRA
+- Importa las funciones createSlice y nanoid de "@reduxjs/toolkit".
+
+ALGORITMO
+- Utiliza createSlice para crear un slice llamado "cars" con un estado inicial que contiene searchTerm (cadena de búsqueda) y carsData (array de datos de automóviles vacío).
+- Define tres reducers en el slice: changeSearchTerm, addCar, y removeCar.
+  - El reducer changeSearchTerm actualiza el valor de searchTerm en el estado según el payload de la acción.
+  - El reducer addCar agrega un nuevo automóvil al array carsData en el estado, utilizando la información proporcionada en el payload de la acción y generando un identificador único con nanoid().
+  - El reducer removeCar elimina un automóvil del array carsData en el estado, utilizando el identificador proporcionado en el payload de la acción y actualizando el array con el método filter.
+- Exporta las acciones (action creators) changeSearchTerm, addCar, y removeCar, así como el reducer carsReducer generado por createSlice.
+
+LO QUE RETORNA
+- Exporta tres acciones (action creators) llamadas changeSearchTerm, addCar, y removeCar, que se pueden utilizar para despachar las acciones respectivas.
+- Exporta el reducer carsReducer que maneja el estado del slice "cars".
+*/
+
+
 const carsSlice = createSlice({
     name: 'cars',
     initialState: {
-        searchTerm: "",
+        searchTerm: "", //Este es un controlled input
         carsData: []
     },
     reducers: {

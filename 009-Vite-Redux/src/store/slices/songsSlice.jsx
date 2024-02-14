@@ -58,6 +58,10 @@ const songsSlice = createSlice ({
             //debido a immer, no se puede hacer algo como state = [] ya que esto es asignar de nuevo mas no cambiar el state asi que se utiliza el return
             //state.playlist = [] va a funcionar normal pero state = [] no.
             //state.push("este es un extra reducer")
+
+        // NOTESE QUE: No hay returns en los reducers, ya que se cambio el state, pero si no se cambia
+        //redux va a asumir que no se cambio states y va a asignar lo que haya en el return.
+
             return [];
         });
     },

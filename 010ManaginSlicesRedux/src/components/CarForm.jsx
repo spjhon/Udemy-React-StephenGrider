@@ -30,6 +30,9 @@ function CarForm () {
         };
     });
 
+    /*const state = useSelector ((state) => state)
+    console.log(state) //este state es un ejemplo de que se puede destructurar el object principal que en este caso es state*/
+
     const handleNameChange = (event) => {
         dispatch(changeName(event.target.value))
     };

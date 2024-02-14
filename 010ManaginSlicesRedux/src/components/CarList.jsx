@@ -23,7 +23,9 @@ function CarList () {
     const dispatch = useDispatch();
     //en este useSelector se esta utilizando algo de desctructuring
     //recuerda que el useSelector retorna valor, es una funcion despues de todo
-    const {cars, name} = useSelector(({form, cars: {searchTerm, carsData}}) => {
+
+    //ESTE ES EL METODO DE GRIDER PARA DESTRUCTURACION
+    /*const {cars, name} = useSelector(({form, cars: {searchTerm, carsData}}) => {
         
         const filteredCars =  carsData.filter((car) =>
         car.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -34,6 +36,23 @@ function CarList () {
         name: form.name,
       }
     });
+
+    /*ESTA ES OTRA FORMA DE APLICAR EL DESTRUCTURING*/
+    //Sin embargo noto que se puede utilizar el destructurin para saber que es lo que llega a ese useSelector de cuales slices
+    const { cars, name } = useSelector((state) => {
+
+  const filteredCars = state.cars.carsData.filter((car) =>
+    car.name.toLowerCase().includes(state.cars.searchTerm.toLowerCase())
+  );
+
+  return {
+    cars: filteredCars,
+    name: state.form.name,
+  };
+});
+
+    
+    
 
 
     const handleCarDelete = ((car) => {

@@ -10,6 +10,7 @@ Es una app para agregar una lista de titulos de peliculas y titulos de canciones
 - Creacion de Slices
 - Como utilizar useDispatch para mandar ordenes a los Slices y que se guarde en el store
 - Creacion de extraReducers
+- useSelector
 
 ## Tips
 

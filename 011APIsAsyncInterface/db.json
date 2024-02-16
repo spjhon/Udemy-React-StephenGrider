@@ -1,49 +1,5 @@
 {
-  "users": [
-    {
-      "name": "Sophie Zboncak PhD",
-      "id": 1
-    },
-    {
-      "name": "Wm Jones",
-      "id": 2
-    },
-    {
-      "name": "Eddie Bernier",
-      "id": 3
-    },
-    {
-      "name": "Virgil Ruecker",
-      "id": 4
-    }
-  ],
-  "Albums": [
-    {
-      "userId": 1,
-      "title": "Handmade Steel Keyboard",
-      "id": 1
-    }
-  ],
-  "photos": [
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=7823",
-      "id": 1
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=12764",
-      "id": 2
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=83688",
-      "id": 3
-    },
-    {
-      "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=37409",
-      "id": 4
-    }
-  ]
+  "users": [],
+  "Albums": [],
+  "photos": []
 }

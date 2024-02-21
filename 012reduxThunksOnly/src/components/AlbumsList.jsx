@@ -22,7 +22,7 @@ function AlbumsList ({user}){
 
     const filteredData = data.filter(item => item.userId === user.id);
 
-    console.log(filteredData)
+   
 
   
 

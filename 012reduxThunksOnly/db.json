@@ -1,15 +1,21 @@
 {
   "users": [
     {
-      "name": "Helen Hackett",
+      "name": "Gene Kulas",
       "id": 1
     }
   ],
-  "Albums": [],
+  "Albums": [
+    {
+      "title": "Handmade Bronze Car",
+      "userId": 1,
+      "id": 1
+    }
+  ],
   "photos": [
     {
       "albumId": 1,
-      "url": "https://loremflickr.com/150/150/abstract?lock=47056",
+      "url": "https://loremflickr.com/150/150/abstract?lock=70565",
       "id": 1
     }
   ]

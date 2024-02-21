@@ -1,12 +1,14 @@
-import { useRemovePhotoMutation } from "../store";
+
 import { GoTrashcan } from "react-icons/go";
+import { removePhoto } from "../store";
+import useThunk from "../hooks/useThunk";
 
 function PhotosListItem({photo}) {
-    const [removePhoto, results] = useRemovePhotoMutation();
+    const [doRemovePhoto, isLoading, error] = useThunk(removePhoto);
 
 
     const handleRemovePhoto = () => {
-        removePhoto(photo);
+        doRemovePhoto(photo);
     };
 
     return <div onClick={handleRemovePhoto} className="relative m-2 cursor-pointer">

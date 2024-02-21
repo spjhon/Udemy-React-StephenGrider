@@ -6,41 +6,6 @@ import Button from './Button'
 import useThunk from "../hooks/useThunk";
 import UsersListItem from "./UsersListItem";
 
-
-/* LO QUE ENTRA
-   - El componente UsersList utiliza el hook useEffect de React para realizar operaciones asíncronas al montar el componente.
-   - Utiliza los custom hooks useThunk para manejar las operaciones asíncronas relacionadas con fetching y creación de usuarios.
-   - Utiliza el hook useSelector de react-redux para obtener el estado de los usuarios del store Redux.
-
-ALGORITMO
-1. **Inicialización de Custom Hooks y Variables:**
-   - Se utilizan los custom hooks useThunk para las operaciones asíncronas fetchUsers y addUser.
-   - Se utiliza el hook useSelector para extraer el estado de los usuarios (data), isLoadingUsers, y loadingUsersError del store Redux.
-   
-2. **Efecto al Montar el Componente:**
-   - Se utiliza el useEffect para realizar la operación de fetchUsers al montar el componente.
-   - El useEffect se ejecuta cuando cambia el custom hook doFetchUsers.
-   - El custom hook doFetchUsers realiza el dispatch de la acción fetchUsers y gestiona los estados isLoadingUsers y loadingUsersError.
-   
-3. **Manejo de Creación de Usuario:**
-   - Se utiliza el custom hook doCreateUser para manejar la operación asíncrona de addUser.
-   - Se utiliza la función handleUserAdd para llamar a doCreateUser al hacer clic en el botón de agregar usuario.
-   
-4. **Renderizado Condicional:**
-   - Se realiza un renderizado condicional del contenido del componente:
-      - Si isLoadingUsers es true, se muestra un componente Skeleton para indicar la carga.
-      - Si loadingUsersError es true, se muestra un mensaje de error.
-      - Si no hay errores ni carga, se mapea la información de los usuarios y se crea una lista de UsersListItem.
-
-5. **Renderizado de UI:**
-   - Se renderiza la interfaz de usuario con un título "Users" y un botón "+ Add User".
-   - El botón tiene lógica condicional para mostrar un spinner de carga si se está creando un usuario (isCreatingUser).
-   - Se muestra un mensaje de error (creatingUserError) si hay un problema al crear un usuario.
-
-LO QUE RETORNA
-   - El componente UsersList retorna la interfaz de usuario que muestra la lista de usuarios, un botón para agregar usuarios, y mensajes de carga y error.
-*/
-
 function UsersList () {
     //ESTE PRIMER COMPONENTE HACE FETCH A LOS USUARIOS QUE EXISTEN
 
@@ -58,6 +23,8 @@ function UsersList () {
     const {data}= useSelector((state) => {
         return state.users
     });
+
+  
 
     useEffect(() => {
         //aqui funciona el dispatch(fechusers())

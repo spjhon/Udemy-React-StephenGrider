@@ -1,5 +1,18 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "Mattie Stanton",
+      "id": 1
+    },
+    {
+      "name": "Pearl Kuphal",
+      "id": 2
+    },
+    {
+      "name": "Amelia Roob",
+      "id": 3
+    }
+  ],
   "Albums": [],
   "photos": []
 }

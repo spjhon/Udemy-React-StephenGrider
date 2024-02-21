@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "Helen Hackett",
+      "id": 1
+    }
+  ],
+  "Albums": [],
+  "photos": [
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150/abstract?lock=47056",
+      "id": 1
+    }
+  ]
+}

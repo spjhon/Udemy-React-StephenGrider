@@ -6,7 +6,7 @@ import axios from "axios";
 const fetchUsers = createAsyncThunk ('users/fetchs', async () => {
     const response = await axios.get('http://localhost:3005/users');
     //response.data === [{i: 1, name: "myra"}]
-
+   
     //DEV ONLY!!!
     //await pause (3000);
     //El return siempre va a ser el payload de el llamado en el slice

@@ -28,12 +28,7 @@ Ahora se utiliza el sistema de redux toolkit query para hacer el fetching y todo
 - El componente fetchUsers de los thunks solo hace el llamado de datos, asi como los otros componentes, estos componentes solo se encargan de hacer el proceso final a travez de axios.
 - En el componente useThunk es donde se utiliza los thunks que hacen los respectivos HTTP request, y estos thunks contienen los states de loading y error que son repartidos a aquellos componentes que requieren el fetch.
 
-- Se crea el componente que va a hacer el fetching
-- Se crea la store con su respectivo reducer
-- Se crea el slice que va a contener tres states, el state cuando esta pending, el fullfiled y el error
-- Se utiliza el useSelector para traer y distribuir los datos en el componente el cual va a tener de esos tres estados renderizado
-
-- Entonces cuando se dispara el thunk.
+- Entonces cuando se dispara el thunk:
 
 Creating an Async Thunk
 
@@ -50,5 +45,9 @@ Aqui se utiliza axios para hacer el request y retornar los datos que se deseen e
 
 4. In the slice, add extrRedcuers, watching for the action types made by the thunk
 Aqui lo que se hace en el slice es que se adiciona el state de acuerdo a si es pending, fullfiled o error y actualizar todo el slice y los subsecuentes componentes acorde a los nuevos states.
+
+5. Export the thunk from the store/index.js file
+
+6. When a user does something, dispatch the thunk function to run it.
 
 ### Proceso de fetching con RTK Query

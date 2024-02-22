@@ -85,8 +85,8 @@ const albumsSlice = createSlice({
     builder.addCase(removeUser.fulfilled, (state, action) => {
       console.log(action.payload)
       console.log(JSON.parse(JSON.stringify(state)));
-      state.data = state.data.filter((user) => {
-        return user.id !== action.payload.id;
+      state.data = state.data.filter((album) => {
+        return album.userId !== action.payload.id;
     });
     });
 

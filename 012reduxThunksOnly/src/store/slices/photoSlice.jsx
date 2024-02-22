@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchPhoto } from "../thunks/fetchPhoto";
 import { addPhoto } from "../thunks/addPhoto";
 import { removePhoto } from "../thunks/removePhoto";
-import { removeUser } from "../thunks/removeUser";
+import { removeAlbum } from "../thunks/removeAlbum";
 
 const photoSlice = createSlice({
   name: "photos",
@@ -67,8 +67,8 @@ const photoSlice = createSlice({
     });
     builder.addCase(removePhoto.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.data = state.data.filter((album) => {
-        return album.albumId !== action.payload.albumId;
+      state.data = state.data.filter((photo) => {
+        return photo.id !== action.payload.id;
       });
     });
     builder.addCase(removePhoto.rejected, (state, action) => {
@@ -78,15 +78,15 @@ const photoSlice = createSlice({
 
     ///////////////////////////////////////////////////////////////////
 
-    /* PARA ORGANIZAR
-    builder.addCase(removeUser.fulfilled, (state, action) => {
-      console.log(action.payload)
-      console.log(JSON.parse(JSON.stringify(state)));
-      state.data = state.data.filter((user) => {
-        return user.id !== action.payload.id;
+    // PARA ORGANIZAR
+    builder.addCase(removeAlbum.fulfilled, (state, action) => {
+      //console.log(action.payload)
+      //console.log(JSON.parse(JSON.stringify(state)));
+      state.data = state.data.filter((album) => {
+        return album.albumId !== action.payload.id;
     });
     });
-*/
+
   },
 });
 

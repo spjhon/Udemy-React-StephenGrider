@@ -17,6 +17,11 @@ Ahora se utiliza el sistema de redux toolkit query para hacer el fetching y todo
 - RTK query
 - Redux ToolKit
 
+### Herramientas propias
+
+- createApi()
+- 
+
 ## Tips
 
 - Thunks es viejo, lo nuevo es RTK query.
@@ -51,3 +56,21 @@ Aqui lo que se hace en el slice es que se adiciona el state de acuerdo a si es p
 6. When a user does something, dispatch the thunk function to run it.
 
 ### Proceso de fetching con RTK Query
+
+Pertenece a toolkit query, se encarga de crear automaticamente los tunks y los slices necearios para el correcto fetching, lo que nos da son los hooks para poder hacer los request o los post por medio de HTTP.
+
+Se hace por medio de la herramienta createApi. Esta api lo que hace es que es un codigo que corre del lado del cliente y que sirve de mediador entre el fetch del navegador y redux
+
+Por medio de endpoints se crean hooks que sirven para hacer mutations o queries, entonces la idea es que de estos hooks, automaticamente la magia de react-toolkit query es que nos devuelve states de loading, error, entre otros al momento de crear cada query o mutation cuando son invocados en el componente.
+
+#### Proceso
+
+1. Identify a group of related requests that your app needs to make
+2. Make a new file that will create the api
+3. The API needs to store a ton of state related to data, request status, erros. Add a "reducerPath"
+4. The API needs to know how and where to send requests. Add a "baseQuery"
+5. Add "andpoints", one for each kind of request you want to make. Reqs that read data are queries, write data are mutations
+6. Export all of the automatically generated hooks
+7. Connect the API to the store. Reducer, middleware, and listeners.
+8. Export the hooks from the store/index.js file.
+9. Use the generated hooks in a component!.

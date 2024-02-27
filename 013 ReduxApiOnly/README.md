@@ -74,3 +74,5 @@ Por medio de endpoints se crean hooks que sirven para hacer mutations o queries,
 7. Connect the API to the store. Reducer, middleware, and listeners.
 8. Export the hooks from the store/index.js file.
 9. Use the generated hooks in a component!.
+
+![Link a un css analizer](https://www.projectwallace.com/css-code-quality)

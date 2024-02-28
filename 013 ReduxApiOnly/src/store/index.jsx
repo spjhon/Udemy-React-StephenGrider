@@ -11,6 +11,8 @@ export const store = configureStore({
         //este [albumsApi.reducerPath] es una forma de evitar escribir albums: albumsApi.reducer
         //Esto es una destructuracion de un array ya que hay muchos states que se manejan desde la api
         //no solamente los states que necesitamos, esto se puede apreciar en el devtoos de redux
+        //ESTE CODIGO ES EQUIVALENTE
+        //albums: albumsApi.reducer
         [albumsApi.reducerPath]: albumsApi.reducer,
         [photosApi.reducerPath]: photosApi.reducer,
     },

@@ -87,3 +87,6 @@ Guiarse con este diagrama para hacer request http
 9. Use the generated hooks in a component!.
 
 ![Link a un css analizer](https://www.projectwallace.com/css-code-quality)
+
+- Una ventaja de utilizar RTK query es que hace el uso se useEffect automaticamente al momento de utilizar la funcion de fetching creada en la API.
+- Tener en cuenta todo lo que retorna la API ademas del error, isLoading, is Fetching, data, etc.

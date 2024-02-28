@@ -4,8 +4,10 @@ import {faker} from '@faker-js/faker';
 const albumsApi = createApi ({
     reducerPath: 'albums',
     //fetchBaseQuery es una forma opitionanda del fetch que esta por defecto en el navegador
+    //aqui es donde se dice que no utilice axios sino el fetch del navegador
+    //lo que hace es pre-configurar la funcion de fetch del navegador
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://localhost:3005'
+        baseUrl: 'http://localhost:3005' //a esto se le dice configuration object
     }),
     //los endpoints son los diferentes request que se va a hacer al servidor
     endpoints(builder) {

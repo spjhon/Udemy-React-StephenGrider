@@ -20,7 +20,6 @@ Ahora se utiliza el sistema de redux toolkit query para hacer el fetching y todo
 ### Herramientas propias
 
 - createApi()
-- 
 
 ## Tips
 
@@ -65,11 +64,23 @@ Por medio de endpoints se crean hooks que sirven para hacer mutations o queries,
 
 #### Proceso
 
-1. Identify a group of related requests that your app needs to make
-2. Make a new file that will create the api
+1. Identify a group of related requests that your app needs to make.
+En el ejemplo se aprecia como por ejemplo un componente necesita hacer varios request del mismo tipo
+
+2. Make a new file that will create the api.
+Crear el archivo en la store de redux.
+
 3. The API needs to store a ton of state related to data, request status, erros. Add a "reducerPath"
+Aqui lo que se dice es que dentro de createApi se especifica la key en donde se va a guardar todo el state dentro de la store.
+
 4. The API needs to know how and where to send requests. Add a "baseQuery"
-5. Add "andpoints", one for each kind of request you want to make. Reqs that read data are queries, write data are mutations
+Lo que hace es hacer una pre-configuracion de fetch del navegador
+
+5. Add "andpoints", one for each kind of request you want to make. Reqs that read data are queries, write data are mutations.
+Para esto se utiliza un diagrama que responde una serie de preguntas para saber como crear las queries y mutations. video 388.
+Guiarse con este diagrama para hacer request http
+![Diagrama](./src/assets/Requests.jpg)
+
 6. Export all of the automatically generated hooks
 7. Connect the API to the store. Reducer, middleware, and listeners.
 8. Export the hooks from the store/index.js file.

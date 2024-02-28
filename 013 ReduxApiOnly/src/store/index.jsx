@@ -9,6 +9,8 @@ export const store = configureStore({
         users: usersReducer,
         //la palabra albums es la misma que se utiliza en el path de la api
         //este [albumsApi.reducerPath] es una forma de evitar escribir albums: albumsApi.reducer
+        //Esto es una destructuracion de un array ya que hay muchos states que se manejan desde la api
+        //no solamente los states que necesitamos, esto se puede apreciar en el devtoos de redux
         [albumsApi.reducerPath]: albumsApi.reducer,
         [photosApi.reducerPath]: photosApi.reducer,
     },

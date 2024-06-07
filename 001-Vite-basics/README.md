@@ -17,8 +17,9 @@ This template provides a minimal setup to get React working in Vite with HMR and
 ### Tips
 
 - Se recomienda saber como funciona el sistema de imports y exports de javascript
+- Se recomienda que los componentes empiecen con la letra mayuscula en su nombre de archivo (Component.jsx)
 - Un componente en REACT es una funcion que retorna HTML al DOM virtual.
-- Por medio de esta pequeña app se demuestra como funciona jsx y las 5 reglas primarias a comparacion de HTML normal.
+- Por medio de esta pequeña app se demuestra como funciona jsx y las 5 reglas primarias a comparacion de HTML normal. (**diagrama 010 de este repositorio)**
 - Tambien se explica como react captura el root del dom para renderizarlo
 - Curiosamente un input se puede editar en vivo sin necesidad de utilizar el (e)
 - Porfavor aplicar al menos las 5 reglas basicas de HTML.

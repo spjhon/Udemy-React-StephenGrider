@@ -13,6 +13,7 @@ En este ejemplo del react de grider se explica y se aprenden trucos de:
 ### Tips
 
 - Los componentes en REACT siempre deben de tener una letra mayuscula al principio para diferenciarlos de elementos HTML normales.
+- Ojo cuando se utiliza un componente mas de una vez, cada componente es independiente
 - Ojo con la inmutabilidad cuando se trabaja con los estados (recuerda el .slide() y el ...history en el ejemplo de tick-toc).
 - JavaScript tiene una particularidad, si un object tiene dos llaves con el mismo nombre, una sobre-escribe a la otra (LAS LLAVES EN LOS OBJECTS DEBEN DE SER UNICAS).
 - The **spread** syntax: The dots literally mean “gather the remaining parameters into an array”, cuando se utiliza como parametro

@@ -2,7 +2,7 @@
 
 ## Como funciona la app
 
-La idea de este ejercicio es mostrar como hacer un CRUD basico, utilizando para ello useEffect para hacer un correcto fetching de informacion a data persitente desde un archivo json, es lo mismo que en el anterior solo que ca la api hace un fetch a un archivo externo y hace la distribucion de la info de la misma forma, aqui lo nuevo es el uso de un hook llamado useEffect que tiene muchas muchas particularidades de las que hay que estar pendiente
+La idea de este ejercicio es mostrar como hacer un CRUD basico, utilizando para ello useEffect para hacer un correcto fetching de informacion a data persitente desde un archivo json, es lo mismo que en el anterior solo que aca la api hace un fetch a un archivo externo y hace la distribucion de la info de la misma forma, aqui lo nuevo es el uso de un hook llamado useEffect que tiene muchas muchas particularidades de las que hay que estar pendiente
 
 ### Temas tratados
 

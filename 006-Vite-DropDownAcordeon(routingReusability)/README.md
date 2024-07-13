@@ -25,7 +25,7 @@ En esta app hay varios temas tratados en una sola, se trata de una pagina princi
 - Con este Ejercico es que se explica como aplicarle state a un componente, los pasos para saber que tipo de state necesita
 - Los estados del acordeon son simples, solo esta expandido o no y en donde debe de estar expandido
 - Se aplica logica de conditional rendering
-- Se explica un bug al momento de actualizar un state y el fix es aplicar una forma funcional de actualizacion del state
+- Se explica un bug al momento de actualizar un state y el fix es aplicar una forma funcional de actualizacion del state de forma que siempre se obtenga el dato mas actualizado del state (latest state, most recent state)
 
 ### Dropdown
 

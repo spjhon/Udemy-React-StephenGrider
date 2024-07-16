@@ -35,6 +35,8 @@ Lo que hace es que a travez de un input se utiliza el termino para hacer una bus
 
 en el componente APP esta el state que se maneja en los dos componentes hijos
 
+- Se utilizo una libreria externa para el manejo del mapa
+
 ## Temas Tratados
 
 - Typescript

@@ -33,6 +33,20 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - React trata diferente a los Numbers, Strings, Null, Undefind y Booleanos a los Arrays y los Objects para cuando se utiliza el state, entonces con los arrays y los objects toca hacer una copia con el ...
 - No retorne un objeto como tal en la function o va a dar error
 - Para agregar estilo se utiliza className, no se utiliza class como en html normalmente se haria.
+- **Dato Curioso**: Sí, en un proyecto React, cuando importas una carpeta, el compilador buscará por defecto un archivo llamado index.ts o index.tsx dentro de esa carpeta para realizar la importación. Esto es una convención que facilita la importación de módulos.
+- since React 16.2.0, it is possible to return an array directly as follows:
+
+```javascript
+return [
+ <li key="1">First item</li>, 
+ <li key="2">Second item</li>, 
+ <li key="3">Third item</li>
+]
+```
+
+- **Ojo cuando se utiliza un componente mas de una vez, cada componente es independiente (es su propia instancia)**
+- Setup basico y creacion de projecto se utiliza **VITE** ya que create-react-app es muy lenta y tiene mucho bloatware
+- Los componentes en REACT siempre deben de tener una letra mayuscula al principio para diferenciarlos de elementos HTML normales.
 
 #### Basic JSX rules
 
